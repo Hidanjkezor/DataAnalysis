@@ -209,5 +209,26 @@ namespace GraphDataAnalysis
             _controlZgcList[(int)numericUpDownGraphNo.Value - 1].RestoreScale(_controlZgcList[(int)numericUpDownGraphNo.Value - 1].GraphPane);
             _controlZgcList[(int)numericUpDownGraphNo.Value - 1].Invalidate();
         }
+
+
+        private void ExecAntiTrendButton_Click(object sender, EventArgs e)
+        {
+            var flag = true;
+            flag &= int.TryParse(WindowSizeTextBox.Text, out var Wsize);
+
+            if (!flag)
+            {
+                MessageBox.Show("Не все данные в правильном формате!", "Ошибка", MessageBoxButtons.OK);
+                return;
+            }
+
+            foreach (var curve in _controlZgcList[(int)numericUpDownGraphNo.Value - 1].GraphPane.CurveList)
+            {
+                GraphEditor.AntiTrend(curve, Wsize);
+            }
+
+            _controlZgcList[(int)numericUpDownGraphNo.Value - 1].RestoreScale(_controlZgcList[(int)numericUpDownGraphNo.Value - 1].GraphPane);
+            _controlZgcList[(int)numericUpDownGraphNo.Value - 1].Invalidate();
+        }
     }
 }

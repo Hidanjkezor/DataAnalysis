@@ -8,6 +8,29 @@ namespace GraphDataAnalysis.MyClasses
     {
         private static readonly Random Rnd = new Random();
 
+        public static void AntiTrend(CurveItem ci, int SizeWindow)
+        {
+            PointPairList input_dots = GraphConverter.GetPointPairListFromCurve(ci);
+            for (var i = 1; i< SizeWindow; i+=2)
+            {
+                var average = Analyser.GetAverageOnRange(input_dots, 0, i);
+                ci.Points[i / 2].Y = average;
+            }
+            for (var i = 0;i < ci.Points.Count - SizeWindow; i++)
+            {
+                var average = Analyser.GetAverageOnRange(input_dots, i, i + SizeWindow);
+                ci.Points[i + SizeWindow / 2].Y = average;
+            }
+            for (var i = SizeWindow; i >= 1 ;i-=2)
+            {
+                var average = Analyser.GetAverageOnRange(input_dots, input_dots.Count - i - 1, input_dots.Count - 1);
+                ci.Points[ci.Points.Count - 1 - i / 2].Y = average;
+            }
+            for(var i = 0; i < ci.Points.Count; i++)
+            {
+                ci.Points[i].Y = input_dots[i].Y - ci.Points[i].Y;
+            }
+        }
         public static void Shift(CurveItem ci, double c)
         {
             for (var i = 0; i < ci.Points.Count; i++)

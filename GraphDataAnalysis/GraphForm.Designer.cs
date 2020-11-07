@@ -83,6 +83,10 @@
             this.spikeSizeLabel = new System.Windows.Forms.Label();
             this.spikeSizeTextbox = new System.Windows.Forms.TextBox();
             this.addSpikesButton = new System.Windows.Forms.Button();
+            this.AntiTrendGroupBox = new System.Windows.Forms.GroupBox();
+            this.ExecAntiTrendButton = new System.Windows.Forms.Button();
+            this.WindowSizeLabel = new System.Windows.Forms.Label();
+            this.WindowSizeTextBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownGraphNo)).BeginInit();
             this.linearGroupBox.SuspendLayout();
             this.ExpGoupBox.SuspendLayout();
@@ -92,6 +96,7 @@
             this.AntiShiftGroupBox.SuspendLayout();
             this.antiSpikeGroupBox.SuspendLayout();
             this.spikeGroupBox.SuspendLayout();
+            this.AntiTrendGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // zedGraphControl1
@@ -662,11 +667,52 @@
             this.addSpikesButton.UseVisualStyleBackColor = true;
             this.addSpikesButton.Click += new System.EventHandler(this.addSpikesButton_Click);
             // 
+            // AntiTrendGroupBox
+            // 
+            this.AntiTrendGroupBox.Controls.Add(this.ExecAntiTrendButton);
+            this.AntiTrendGroupBox.Controls.Add(this.WindowSizeLabel);
+            this.AntiTrendGroupBox.Controls.Add(this.WindowSizeTextBox);
+            this.AntiTrendGroupBox.Location = new System.Drawing.Point(859, 485);
+            this.AntiTrendGroupBox.Name = "AntiTrendGroupBox";
+            this.AntiTrendGroupBox.Size = new System.Drawing.Size(222, 51);
+            this.AntiTrendGroupBox.TabIndex = 19;
+            this.AntiTrendGroupBox.TabStop = false;
+            this.AntiTrendGroupBox.Text = "Антитренд";
+            // 
+            // ExecAntiTrendButton
+            // 
+            this.ExecAntiTrendButton.Location = new System.Drawing.Point(134, 17);
+            this.ExecAntiTrendButton.Name = "ExecAntiTrendButton";
+            this.ExecAntiTrendButton.Size = new System.Drawing.Size(75, 23);
+            this.ExecAntiTrendButton.TabIndex = 15;
+            this.ExecAntiTrendButton.Text = "Выполнить";
+            this.ExecAntiTrendButton.UseVisualStyleBackColor = true;
+            this.ExecAntiTrendButton.Click += new System.EventHandler(this.ExecAntiTrendButton_Click);
+            // 
+            // WindowSizeLabel
+            // 
+            this.WindowSizeLabel.AutoSize = true;
+            this.WindowSizeLabel.Location = new System.Drawing.Point(6, 22);
+            this.WindowSizeLabel.Name = "WindowSizeLabel";
+            this.WindowSizeLabel.Size = new System.Drawing.Size(36, 13);
+            this.WindowSizeLabel.TabIndex = 11;
+            this.WindowSizeLabel.Text = "Wsize";
+            // 
+            // WindowSizeTextBox
+            // 
+            this.WindowSizeTextBox.Location = new System.Drawing.Point(46, 19);
+            this.WindowSizeTextBox.Name = "WindowSizeTextBox";
+            this.WindowSizeTextBox.Size = new System.Drawing.Size(82, 20);
+            this.WindowSizeTextBox.TabIndex = 12;
+            this.WindowSizeTextBox.Text = "30";
+            this.WindowSizeTextBox.TextChanged += new System.EventHandler(this.IntParamTextBox_TextChanged);
+            // 
             // GraphForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1204, 592);
+            this.Controls.Add(this.AntiTrendGroupBox);
             this.Controls.Add(this.antiSpikeGroupBox);
             this.Controls.Add(this.spikeGroupBox);
             this.Controls.Add(this.AntiShiftGroupBox);
@@ -708,6 +754,8 @@
             this.antiSpikeGroupBox.PerformLayout();
             this.spikeGroupBox.ResumeLayout(false);
             this.spikeGroupBox.PerformLayout();
+            this.AntiTrendGroupBox.ResumeLayout(false);
+            this.AntiTrendGroupBox.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -769,6 +817,10 @@
         private System.Windows.Forms.Label spikeSizeLabel;
         private System.Windows.Forms.TextBox spikeSizeTextbox;
         private System.Windows.Forms.Button addSpikesButton;
+        private System.Windows.Forms.GroupBox AntiTrendGroupBox;
+        private System.Windows.Forms.Button ExecAntiTrendButton;
+        private System.Windows.Forms.Label WindowSizeLabel;
+        private System.Windows.Forms.TextBox WindowSizeTextBox;
     }
 }
 
