@@ -87,6 +87,25 @@
             this.ExecAntiTrendButton = new System.Windows.Forms.Button();
             this.WindowSizeLabel = new System.Windows.Forms.Label();
             this.WindowSizeTextBox = new System.Windows.Forms.TextBox();
+            this.CardioPlotter = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.BadHeatButton = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.anti_noise = new System.Windows.Forms.Button();
+            this.with_grph = new System.Windows.Forms.CheckBox();
+            this.anti_noise_n = new System.Windows.Forms.Label();
+            this.anti_noise_n_text_box = new System.Windows.Forms.TextBox();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.m_textBox = new System.Windows.Forms.TextBox();
+            this.Potter_button = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.fc_textBox = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.dt_textBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownGraphNo)).BeginInit();
             this.linearGroupBox.SuspendLayout();
             this.ExpGoupBox.SuspendLayout();
@@ -97,6 +116,11 @@
             this.antiSpikeGroupBox.SuspendLayout();
             this.spikeGroupBox.SuspendLayout();
             this.AntiTrendGroupBox.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.tabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // zedGraphControl1
@@ -233,7 +257,7 @@
             this.linearGroupBox.Controls.Add(this.dLabel);
             this.linearGroupBox.Controls.Add(this.cLabel);
             this.linearGroupBox.Controls.Add(this.cTextBox);
-            this.linearGroupBox.Location = new System.Drawing.Point(856, 64);
+            this.linearGroupBox.Location = new System.Drawing.Point(0, 3);
             this.linearGroupBox.Name = "linearGroupBox";
             this.linearGroupBox.Size = new System.Drawing.Size(344, 51);
             this.linearGroupBox.TabIndex = 10;
@@ -347,7 +371,7 @@
             this.ExpGoupBox.Controls.Add(this.bLabel);
             this.ExpGoupBox.Controls.Add(this.aLabel);
             this.ExpGoupBox.Controls.Add(this.aTextBox);
-            this.ExpGoupBox.Location = new System.Drawing.Point(856, 121);
+            this.ExpGoupBox.Location = new System.Drawing.Point(0, 60);
             this.ExpGoupBox.Name = "ExpGoupBox";
             this.ExpGoupBox.Size = new System.Drawing.Size(344, 51);
             this.ExpGoupBox.TabIndex = 16;
@@ -370,7 +394,7 @@
             this.randomGroupBox.Controls.Add(this.addRandomButton);
             this.randomGroupBox.Controls.Add(this.sLabel);
             this.randomGroupBox.Controls.Add(this.sTextBox);
-            this.randomGroupBox.Location = new System.Drawing.Point(856, 178);
+            this.randomGroupBox.Location = new System.Drawing.Point(0, 117);
             this.randomGroupBox.Name = "randomGroupBox";
             this.randomGroupBox.Size = new System.Drawing.Size(344, 51);
             this.randomGroupBox.TabIndex = 17;
@@ -422,7 +446,7 @@
             this.sinGroupBox.Controls.Add(this.fLabel);
             this.sinGroupBox.Controls.Add(this.AmpLabel);
             this.sinGroupBox.Controls.Add(this.ampTextBox);
-            this.sinGroupBox.Location = new System.Drawing.Point(856, 235);
+            this.sinGroupBox.Location = new System.Drawing.Point(0, 174);
             this.sinGroupBox.Name = "sinGroupBox";
             this.sinGroupBox.Size = new System.Drawing.Size(344, 51);
             this.sinGroupBox.TabIndex = 17;
@@ -499,9 +523,9 @@
             // 
             // openAnalyserButton
             // 
-            this.openAnalyserButton.Location = new System.Drawing.Point(1117, 559);
+            this.openAnalyserButton.Location = new System.Drawing.Point(1118, 548);
             this.openAnalyserButton.Name = "openAnalyserButton";
-            this.openAnalyserButton.Size = new System.Drawing.Size(75, 23);
+            this.openAnalyserButton.Size = new System.Drawing.Size(116, 34);
             this.openAnalyserButton.TabIndex = 20;
             this.openAnalyserButton.Text = "Анализатор";
             this.openAnalyserButton.UseVisualStyleBackColor = true;
@@ -512,7 +536,7 @@
             this.groupBox1.Controls.Add(this.shiftButton);
             this.groupBox1.Controls.Add(this.shiftValueLabel);
             this.groupBox1.Controls.Add(this.shiftValueTextBox);
-            this.groupBox1.Location = new System.Drawing.Point(856, 428);
+            this.groupBox1.Location = new System.Drawing.Point(-3, 108);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(222, 51);
             this.groupBox1.TabIndex = 18;
@@ -550,7 +574,7 @@
             // AntiShiftGroupBox
             // 
             this.AntiShiftGroupBox.Controls.Add(this.antiShiftButton);
-            this.AntiShiftGroupBox.Location = new System.Drawing.Point(1087, 428);
+            this.AntiShiftGroupBox.Location = new System.Drawing.Point(228, 108);
             this.AntiShiftGroupBox.Name = "AntiShiftGroupBox";
             this.AntiShiftGroupBox.Size = new System.Drawing.Size(113, 51);
             this.AntiShiftGroupBox.TabIndex = 19;
@@ -572,7 +596,7 @@
             this.antiSpikeGroupBox.Controls.Add(this.label2);
             this.antiSpikeGroupBox.Controls.Add(this.antiSpikeSTextBox);
             this.antiSpikeGroupBox.Controls.Add(this.proceedAntiSpikeButton);
-            this.antiSpikeGroupBox.Location = new System.Drawing.Point(856, 375);
+            this.antiSpikeGroupBox.Location = new System.Drawing.Point(-3, 55);
             this.antiSpikeGroupBox.Name = "antiSpikeGroupBox";
             this.antiSpikeGroupBox.Size = new System.Drawing.Size(216, 47);
             this.antiSpikeGroupBox.TabIndex = 22;
@@ -614,7 +638,7 @@
             this.spikeGroupBox.Controls.Add(this.spikeSizeLabel);
             this.spikeGroupBox.Controls.Add(this.spikeSizeTextbox);
             this.spikeGroupBox.Controls.Add(this.addSpikesButton);
-            this.spikeGroupBox.Location = new System.Drawing.Point(856, 322);
+            this.spikeGroupBox.Location = new System.Drawing.Point(-3, 2);
             this.spikeGroupBox.Name = "spikeGroupBox";
             this.spikeGroupBox.Size = new System.Drawing.Size(344, 47);
             this.spikeGroupBox.TabIndex = 21;
@@ -623,7 +647,7 @@
             // 
             // spikeCountTextbox
             // 
-            this.spikeCountTextbox.Location = new System.Drawing.Point(179, 18);
+            this.spikeCountTextbox.Location = new System.Drawing.Point(176, 18);
             this.spikeCountTextbox.Name = "spikeCountTextbox";
             this.spikeCountTextbox.Size = new System.Drawing.Size(67, 20);
             this.spikeCountTextbox.TabIndex = 6;
@@ -672,7 +696,7 @@
             this.AntiTrendGroupBox.Controls.Add(this.ExecAntiTrendButton);
             this.AntiTrendGroupBox.Controls.Add(this.WindowSizeLabel);
             this.AntiTrendGroupBox.Controls.Add(this.WindowSizeTextBox);
-            this.AntiTrendGroupBox.Location = new System.Drawing.Point(859, 485);
+            this.AntiTrendGroupBox.Location = new System.Drawing.Point(0, 165);
             this.AntiTrendGroupBox.Name = "AntiTrendGroupBox";
             this.AntiTrendGroupBox.Size = new System.Drawing.Size(222, 51);
             this.AntiTrendGroupBox.TabIndex = 19;
@@ -707,25 +731,217 @@
             this.WindowSizeTextBox.Text = "30";
             this.WindowSizeTextBox.TextChanged += new System.EventHandler(this.IntParamTextBox_TextChanged);
             // 
+            // CardioPlotter
+            // 
+            this.CardioPlotter.Location = new System.Drawing.Point(6, 240);
+            this.CardioPlotter.Name = "CardioPlotter";
+            this.CardioPlotter.Size = new System.Drawing.Size(75, 23);
+            this.CardioPlotter.TabIndex = 16;
+            this.CardioPlotter.Text = "Выполнить";
+            this.CardioPlotter.UseVisualStyleBackColor = true;
+            this.CardioPlotter.Click += new System.EventHandler(this.CardioPlotter_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(9, 221);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(83, 13);
+            this.label1.TabIndex = 23;
+            this.label1.Text = "Кардиограмма";
+            // 
+            // BadHeatButton
+            // 
+            this.BadHeatButton.Location = new System.Drawing.Point(9, 269);
+            this.BadHeatButton.Name = "BadHeatButton";
+            this.BadHeatButton.Size = new System.Drawing.Size(83, 23);
+            this.BadHeatButton.TabIndex = 24;
+            this.BadHeatButton.Text = "Тахиокардия";
+            this.BadHeatButton.UseVisualStyleBackColor = true;
+            this.BadHeatButton.Click += new System.EventHandler(this.BadHeatButton_Click);
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.anti_noise);
+            this.groupBox2.Controls.Add(this.with_grph);
+            this.groupBox2.Controls.Add(this.anti_noise_n);
+            this.groupBox2.Controls.Add(this.anti_noise_n_text_box);
+            this.groupBox2.Location = new System.Drawing.Point(101, 222);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(215, 47);
+            this.groupBox2.TabIndex = 20;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Анти-шум";
+            // 
+            // anti_noise
+            // 
+            this.anti_noise.Location = new System.Drawing.Point(62, 17);
+            this.anti_noise.Name = "anti_noise";
+            this.anti_noise.Size = new System.Drawing.Size(75, 23);
+            this.anti_noise.TabIndex = 15;
+            this.anti_noise.Text = "Выполнить";
+            this.anti_noise.UseVisualStyleBackColor = true;
+            this.anti_noise.Click += new System.EventHandler(this.anti_noise_Click);
+            // 
+            // with_grph
+            // 
+            this.with_grph.AutoSize = true;
+            this.with_grph.Location = new System.Drawing.Point(143, 22);
+            this.with_grph.Name = "with_grph";
+            this.with_grph.Size = new System.Drawing.Size(72, 17);
+            this.with_grph.TabIndex = 16;
+            this.with_grph.Text = "with_grph";
+            this.with_grph.UseVisualStyleBackColor = true;
+            // 
+            // anti_noise_n
+            // 
+            this.anti_noise_n.AutoSize = true;
+            this.anti_noise_n.Location = new System.Drawing.Point(6, 22);
+            this.anti_noise_n.Name = "anti_noise_n";
+            this.anti_noise_n.Size = new System.Drawing.Size(13, 13);
+            this.anti_noise_n.TabIndex = 11;
+            this.anti_noise_n.Text = "n";
+            // 
+            // anti_noise_n_text_box
+            // 
+            this.anti_noise_n_text_box.Location = new System.Drawing.Point(21, 19);
+            this.anti_noise_n_text_box.Name = "anti_noise_n_text_box";
+            this.anti_noise_n_text_box.Size = new System.Drawing.Size(35, 20);
+            this.anti_noise_n_text_box.TabIndex = 12;
+            this.anti_noise_n_text_box.Text = "30";
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Location = new System.Drawing.Point(856, 64);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(353, 412);
+            this.tabControl1.TabIndex = 25;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.BackColor = System.Drawing.Color.White;
+            this.tabPage1.Controls.Add(this.sinGroupBox);
+            this.tabPage1.Controls.Add(this.linearGroupBox);
+            this.tabPage1.Controls.Add(this.ExpGoupBox);
+            this.tabPage1.Controls.Add(this.randomGroupBox);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(345, 386);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "tabPage1";
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.groupBox3);
+            this.tabPage2.Controls.Add(this.groupBox2);
+            this.tabPage2.Controls.Add(this.groupBox1);
+            this.tabPage2.Controls.Add(this.AntiShiftGroupBox);
+            this.tabPage2.Controls.Add(this.BadHeatButton);
+            this.tabPage2.Controls.Add(this.spikeGroupBox);
+            this.tabPage2.Controls.Add(this.label1);
+            this.tabPage2.Controls.Add(this.antiSpikeGroupBox);
+            this.tabPage2.Controls.Add(this.CardioPlotter);
+            this.tabPage2.Controls.Add(this.AntiTrendGroupBox);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(345, 386);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.label5);
+            this.groupBox3.Controls.Add(this.dt_textBox);
+            this.groupBox3.Controls.Add(this.label4);
+            this.groupBox3.Controls.Add(this.m_textBox);
+            this.groupBox3.Controls.Add(this.Potter_button);
+            this.groupBox3.Controls.Add(this.label3);
+            this.groupBox3.Controls.Add(this.fc_textBox);
+            this.groupBox3.Location = new System.Drawing.Point(12, 298);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(264, 51);
+            this.groupBox3.TabIndex = 20;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Поттер";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(57, 22);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(15, 13);
+            this.label4.TabIndex = 16;
+            this.label4.Text = "m";
+            // 
+            // m_textBox
+            // 
+            this.m_textBox.Location = new System.Drawing.Point(76, 19);
+            this.m_textBox.Name = "m_textBox";
+            this.m_textBox.Size = new System.Drawing.Size(23, 20);
+            this.m_textBox.TabIndex = 17;
+            this.m_textBox.Text = "64";
+            // 
+            // Potter_button
+            // 
+            this.Potter_button.Location = new System.Drawing.Point(173, 20);
+            this.Potter_button.Name = "Potter_button";
+            this.Potter_button.Size = new System.Drawing.Size(75, 23);
+            this.Potter_button.TabIndex = 15;
+            this.Potter_button.Text = "Выполнить";
+            this.Potter_button.UseVisualStyleBackColor = true;
+            this.Potter_button.Click += new System.EventHandler(this.Potter_button_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(6, 22);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(16, 13);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "fc";
+            // 
+            // fc_textBox
+            // 
+            this.fc_textBox.Location = new System.Drawing.Point(28, 19);
+            this.fc_textBox.Name = "fc_textBox";
+            this.fc_textBox.Size = new System.Drawing.Size(23, 20);
+            this.fc_textBox.TabIndex = 12;
+            this.fc_textBox.Text = "25";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(107, 22);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(16, 13);
+            this.label5.TabIndex = 18;
+            this.label5.Text = "dt";
+            // 
+            // dt_textBox
+            // 
+            this.dt_textBox.Location = new System.Drawing.Point(123, 20);
+            this.dt_textBox.Name = "dt_textBox";
+            this.dt_textBox.Size = new System.Drawing.Size(35, 20);
+            this.dt_textBox.TabIndex = 19;
+            this.dt_textBox.Text = "0.01";
+            // 
             // GraphForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1204, 592);
-            this.Controls.Add(this.AntiTrendGroupBox);
-            this.Controls.Add(this.antiSpikeGroupBox);
-            this.Controls.Add(this.spikeGroupBox);
-            this.Controls.Add(this.AntiShiftGroupBox);
-            this.Controls.Add(this.groupBox1);
+            this.ClientSize = new System.Drawing.Size(1245, 592);
+            this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.openAnalyserButton);
             this.Controls.Add(this.mergeButton);
             this.Controls.Add(this.clearButton);
-            this.Controls.Add(this.sinGroupBox);
-            this.Controls.Add(this.randomGroupBox);
-            this.Controls.Add(this.ExpGoupBox);
             this.Controls.Add(this.fromTextBox);
             this.Controls.Add(this.fromLabel);
-            this.Controls.Add(this.linearGroupBox);
             this.Controls.Add(this.nTextBox);
             this.Controls.Add(this.nLabel);
             this.Controls.Add(this.dtTextBox);
@@ -756,6 +972,14 @@
             this.spikeGroupBox.PerformLayout();
             this.AntiTrendGroupBox.ResumeLayout(false);
             this.AntiTrendGroupBox.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.tabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -821,6 +1045,25 @@
         private System.Windows.Forms.Button ExecAntiTrendButton;
         private System.Windows.Forms.Label WindowSizeLabel;
         private System.Windows.Forms.TextBox WindowSizeTextBox;
+        private System.Windows.Forms.Button CardioPlotter;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button BadHeatButton;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button anti_noise;
+        private System.Windows.Forms.Label anti_noise_n;
+        private System.Windows.Forms.TextBox anti_noise_n_text_box;
+        private System.Windows.Forms.CheckBox with_grph;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox m_textBox;
+        private System.Windows.Forms.Button Potter_button;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox fc_textBox;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox dt_textBox;
     }
 }
 

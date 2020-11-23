@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing.Printing;
 using System.Linq;
+using System.Net.NetworkInformation;
 using System.Text;
 using ZedGraph;
 
@@ -8,6 +10,7 @@ namespace GraphDataAnalysis.MyClasses
 {
     class Analyser
     {
+        private static readonly Random Rnd = new Random();
         public static double GetMaxOnRange(PointPairList ppl, int minI = 0, int maxI = int.MaxValue)
         {
             if (maxI >= ppl.Count)
@@ -298,12 +301,13 @@ namespace GraphDataAnalysis.MyClasses
             return ans;
         }
 
-        public static PointPairList GetRe(PointPairList ppl)
+        public static PointPairList GetRe(PointPairList ppl, bool normalization)
         {
             var res = new PointPairList();
             for (var n = 0; n < ppl.Count; n++)
             {
                 var sum = ppl.Select((t, k) => t.Y * Math.Cos(2.0 * Math.PI * n * k / ppl.Count)).Sum();
+                if( normalization)
                 sum /= ppl.Count;
 
                 res.Add(n, sum);
@@ -312,12 +316,13 @@ namespace GraphDataAnalysis.MyClasses
             return res;
         }
 
-        public static PointPairList GetIm(PointPairList ppl)
+        public static PointPairList GetIm(PointPairList ppl, bool normalization)
         {
             var res = new PointPairList();
             for (var n = 0; n < ppl.Count; n++)
             {
                 var sum = ppl.Select((t, k) => t.Y * Math.Sin(2.0 * Math.PI * n * k / ppl.Count)).Sum();
+                if(normalization)
                 sum /= ppl.Count;
 
                 res.Add(n, sum);
@@ -332,11 +337,11 @@ namespace GraphDataAnalysis.MyClasses
             return 1.0 / dt / ppl.Count;
         }
 
-        public static PointPairList GetSpectre(PointPairList ppl)
+        public static PointPairList GetSpectre(PointPairList ppl, bool normalization)
         {
             var res = new PointPairList();
-            var im = GetIm(ppl);
-            var re = GetRe(ppl);
+            var im = GetIm(ppl, normalization);
+            var re = GetRe(ppl, normalization);
             var df = GetDf(ppl);
 
             for (var i = 0; i < im.Count; i++)
@@ -345,6 +350,166 @@ namespace GraphDataAnalysis.MyClasses
             }
 
             return res;
+        }
+        public static PointPairList GetPeaks()
+        {
+            var res = new PointPairList();
+            for(var i = 0; i < 1000; i++)
+            {
+                res.Add(i, 0);
+            }
+            for(var i = 100; i < 900; i += 200)
+            {
+                res[i].Y += Rnd.NextDouble() * 20+110; //130-110
+            }
+            return res;
+        }
+        public static PointPairList GetH()
+        {
+            var res = new PointPairList();
+            var dlT = 0.005;
+            var f = 4;
+            var alph = 4;
+            for(var i = 0; i< 200; i++)
+            {
+                var t = i * dlT;
+                res.Add(t, Math.Sin(2 * Math.PI * f *t)*Math.Exp(t*-alph));
+            }
+            return res;
+        }
+        public static PointPairList Heart() // cardiogram
+        {
+            var x = GetPeaks();
+            var h = GetH();
+            var M = 200;
+            var N = 1000;
+
+            var res = new PointPairList();
+            for (int k = 0; k < N+M; k++) 
+            {
+                var sum = 0.0;
+                for (var j = 0; j < M; j++)
+                {
+                    if (k - j < 0 || k - j > N - 1)
+                        continue;
+                    sum += h[j].Y * x[k - j].Y;
+                }
+                res.Add(k, sum);
+            }
+            return res;
+        }
+        public static PointPairList GetBadHeart()
+        {
+            var res = new PointPairList();
+            for (var i = 0; i < 1000; i++)
+            {
+                res.Add(i, 0);
+            }
+            for (var i = 100; i < 900; i += Rnd.Next(1,299))
+            {
+                res[i].Y += Rnd.NextDouble() * 20 + 110; //130-110
+            }
+            return res;
+
+        }
+        public static PointPairList BadHeart() // tachycardia
+        {
+            var x = GetBadHeart();
+            var h = GetH();
+            var M = 200;
+            var N = 1000;
+
+            var res = new PointPairList();
+            for (int k = 0; k < N + M; k++)
+            {
+                var sum = 0.0;
+                for (var j = 0; j < M; j++)
+                {
+                    if (k - j < 0 || k - j > N - 1)
+                        continue;
+                    sum += h[j].Y * x[k - j].Y;
+                }
+                res.Add(k, sum);
+            }
+            return res;
+        }
+        public static PointPairList Accum(int n, bool check_graph)
+        {
+            var res = Plotter.GetLinear(0,0,0,0.001,1000);
+            for (var i = 0; i < n; i++)
+            {
+                var Rnd = Plotter.GetRandom(1,0, 0.001, 1000);
+                for(var j = 0; j < Rnd.Count(); j++)
+                {
+                    res[j].Y += Rnd[j].Y;
+                }
+            }
+            if (check_graph) { 
+            for (var i = 0; i < n; i++)
+            {
+                var Rnd = Plotter.GetSin(1,5,0,0.001,1000);
+                for (var j = 0; j < Rnd.Count(); j++)
+                {
+                    res[j].Y += Rnd[j].Y;
+                }
+            }
+            }
+            for (var j = 0; j < res.Count(); j++)   // Компенсируем рандомы
+            {
+                res[j].Y /= n;
+            }
+            return res;
+        }
+        
+        public static PointPairList GetHarryPotter(double fc, int m, double dt) // fc - частота, m - длина фильтра
+        {
+            var w = new PointPairList();
+            double fact = 2.0*fc*dt;
+            w.Add(0, fact);
+            fact *= Math.PI;
+            for(var i = 1; i<=m; i++)
+            {
+                w.Add(i, Math.Sin(fact * i) / (Math.PI * i));
+            }
+            w[m].Y /= 2;
+
+            var d = new[] { 0.35577019, 0.2436983, 0.07211497, 0.00630164 };
+            var sumg = w[0].Y;
+            for (var i = 1; i <= m; i++)
+            {
+                var sum = d[0];
+                fact = Math.PI * i / m;
+                for (int j = 1; j <= 3; j++)
+                {
+                    sum +=  2.0 * d[j] * Math.Cos(fact * j); 
+                }
+                w[i].Y *= sum;
+                sumg += 2.0 * w[i].Y;
+            }
+
+            for (var i=0; i<=m; i++)
+            {
+                w[i].Y /= sumg;
+            }
+
+
+            for(var i = m; i >= 0; i--)
+            {
+                w.Add(i+m, w[i].Y);
+            }
+            w.RemoveAt(m);
+            w.Sort();
+            for (var i = 0; i<m;i++)
+            {
+                w[i].Y = w[2 * m - i].Y;
+            }
+
+            for(var i=0; i < 2m+1; i++)
+            {
+                w[i].X = i * dt;
+            }
+
+            return w;
         }
     }
 }

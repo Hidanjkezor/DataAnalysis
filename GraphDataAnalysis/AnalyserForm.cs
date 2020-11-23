@@ -88,11 +88,12 @@ namespace GraphDataAnalysis
 
         private void spectrePlotButton_Click(object sender, EventArgs e)
         {
+
             if (_controlZgcList[(int)numericUpDownGraphNo.Value - 1].GraphPane.CurveList.Count == 0)
                 return;
 
             var list = GraphConverter.GetPointPairListFromCurve(_controlZgcList[(int)numericUpDownGraphNo.Value - 1].GraphPane.CurveList[0]);
-            var res = Analyser.GetSpectre(list);
+            var res = Analyser.GetSpectre(list, norm_checked.Checked);
 
             res.RemoveRange(list.Count / 2, list.Count - list.Count / 2);
             Plotter.Clear(spectreZedGraphControl);

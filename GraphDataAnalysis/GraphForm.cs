@@ -230,5 +230,46 @@ namespace GraphDataAnalysis
             _controlZgcList[(int)numericUpDownGraphNo.Value - 1].RestoreScale(_controlZgcList[(int)numericUpDownGraphNo.Value - 1].GraphPane);
             _controlZgcList[(int)numericUpDownGraphNo.Value - 1].Invalidate();
         }
+            
+        private void CardioPlotter_Click(object sender, EventArgs e)
+        {
+            var ppl = Analyser.Heart();
+            Plotter.Draw(_controlZgcList[(int)numericUpDownGraphNo.Value - 1], ppl, "Кардиограмма");
+        }
+
+        private void BadHeatButton_Click(object sender, EventArgs e)
+        {
+            var ppl = Analyser.BadHeart();
+            Plotter.Draw(_controlZgcList[(int)numericUpDownGraphNo.Value - 1], ppl, "Тахиокардия");
+        }
+
+        private void anti_noise_Click(object sender, EventArgs e)
+        {
+            var flag = true;
+            flag &= int.TryParse(anti_noise_n_text_box.Text, out var N);
+            if (!flag)
+            {
+                MessageBox.Show("Не все данные в правильном формате!", "Ошибка", MessageBoxButtons.OK);
+                return;
+            }
+            var ppl = Analyser.Accum(N, with_grph.Checked);
+            Plotter.Draw(_controlZgcList[(int)numericUpDownGraphNo.Value - 1], ppl, "Анти-шум");
+
+        }
+
+        private void Potter_button_Click(object sender, EventArgs e)
+        {
+            var flag = true;
+            flag &= double.TryParse(fc_textBox.Text.Replace('.', ','), out var fc);
+            flag &= int.TryParse(m_textBox.Text, out var m);
+            flag &= double.TryParse(dt_textBox.Text.Replace('.', ','), out var dt);
+            if (!flag)
+            {
+                MessageBox.Show("Не все данные в правильном формате!", "Ошибка", MessageBoxButtons.OK);
+                return;
+            }
+            var ppl = Analyser.GetHarryPotter(fc,m,dt);
+            Plotter.Draw(_controlZgcList[(int)numericUpDownGraphNo.Value - 1], ppl, "Potter");
+        }
     }
 }

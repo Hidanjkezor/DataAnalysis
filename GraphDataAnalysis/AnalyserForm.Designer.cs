@@ -68,6 +68,7 @@
             this.spectreZedGraphControl = new ZedGraph.ZedGraphControl();
             this.graphLabel = new System.Windows.Forms.Label();
             this.numericUpDownGraphNo = new System.Windows.Forms.NumericUpDown();
+            this.norm_checked = new System.Windows.Forms.CheckBox();
             this.tabControl1.SuspendLayout();
             this.characteristicsTabPage.SuspendLayout();
             this.distributionTabPage.SuspendLayout();
@@ -454,6 +455,7 @@
             // 
             // spectreTabPage
             // 
+            this.spectreTabPage.Controls.Add(this.norm_checked);
             this.spectreTabPage.Controls.Add(this.spectrePlotButton);
             this.spectreTabPage.Controls.Add(this.spectreZedGraphControl);
             this.spectreTabPage.Location = new System.Drawing.Point(4, 22);
@@ -524,6 +526,18 @@
             0,
             0});
             // 
+            // norm_checked
+            // 
+            this.norm_checked.AutoSize = true;
+            this.norm_checked.Checked = true;
+            this.norm_checked.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.norm_checked.Location = new System.Drawing.Point(569, 352);
+            this.norm_checked.Name = "norm_checked";
+            this.norm_checked.Size = new System.Drawing.Size(112, 17);
+            this.norm_checked.TabIndex = 4;
+            this.norm_checked.Text = "With normaliztion?";
+            this.norm_checked.UseVisualStyleBackColor = true;
+            // 
             // AnalyserForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -543,6 +557,7 @@
             this.rxyTabPage.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.secondGraphNoNumericUpDown)).EndInit();
             this.spectreTabPage.ResumeLayout(false);
+            this.spectreTabPage.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownGraphNo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -590,5 +605,6 @@
         private ZedGraph.ZedGraphControl spectreZedGraphControl;
         private System.Windows.Forms.Label secondGraphLabel;
         private System.Windows.Forms.NumericUpDown secondGraphNoNumericUpDown;
+        private System.Windows.Forms.CheckBox norm_checked;
     }
 }
