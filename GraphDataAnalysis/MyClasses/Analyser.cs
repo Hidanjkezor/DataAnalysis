@@ -369,7 +369,7 @@ namespace GraphDataAnalysis.MyClasses
             var res = new PointPairList();
             var dlT = 0.005;
             var f = 4;
-            var alph = 4;
+            var alph = 20;
             for(var i = 0; i< 200; i++)
             {
                 var t = i * dlT;
@@ -381,22 +381,7 @@ namespace GraphDataAnalysis.MyClasses
         {
             var x = GetPeaks();
             var h = GetH();
-            var M = 200;
-            var N = 1000;
-
-            var res = new PointPairList();
-            for (int k = 0; k < N+M; k++) 
-            {
-                var sum = 0.0;
-                for (var j = 0; j < M; j++)
-                {
-                    if (k - j < 0 || k - j > N - 1)
-                        continue;
-                    sum += h[j].Y * x[k - j].Y;
-                }
-                res.Add(k, sum);
-            }
-            return res;
+            return GetConvolution(x, h);
         }
         public static PointPairList GetBadHeart()
         {
@@ -416,9 +401,13 @@ namespace GraphDataAnalysis.MyClasses
         {
             var x = GetBadHeart();
             var h = GetH();
-            var M = 200;
-            var N = 1000;
+            return GetConvolution(x, h);
+        }
 
+        public static PointPairList GetConvolution(PointPairList x, PointPairList h)
+        {
+            var N = x.Count;
+            var M = h.Count;
             var res = new PointPairList();
             for (int k = 0; k < N + M; k++)
             {
@@ -433,6 +422,7 @@ namespace GraphDataAnalysis.MyClasses
             }
             return res;
         }
+
         public static PointPairList Accum(int n, bool check_graph)
         {
             var res = Plotter.GetLinear(0,0,0,0.001,1000);
@@ -510,6 +500,46 @@ namespace GraphDataAnalysis.MyClasses
             }
 
             return w;
+        }
+        public static PointPairList GetHarryPotter_HPF(double fc, int m, double dt) // fc - частота, m - длина фильтра
+        {
+            var w_hpf = GetHarryPotter(fc, m, dt);
+
+            for (int i = 0; i<= 2*m;i++)
+            {
+                if (i == m) { w_hpf[i].Y = 1.0 - w_hpf[i].Y; } else
+                {
+                    w_hpf[i].Y = -w_hpf[i].Y;
+                }
+            }
+            return w_hpf;
+        }
+
+        public static PointPairList GetHarryPotter_BP(double fc1, double fc2, int m, double dt) // fc - частота, m - длина фильтра
+        {
+            var lpw1 = GetHarryPotter(fc1, m, dt);
+            var lpw2 = GetHarryPotter(fc2, m, dt);
+
+            for (int i = 0; i<= 2*m;i++)
+            {
+                lpw2[i].Y -= lpw1[i].Y;
+            }
+            return lpw2;
+        }
+
+        public static PointPairList GetHarryPotter_BS(double fc1, double fc2, int m, double dt) // fc - частота, m - длина фильтра
+        {
+            var lpw1 = GetHarryPotter(fc1, m, dt);
+            var lpw2 = GetHarryPotter(fc2, m, dt);
+
+            for (int i = 0;i <= 2 * m; i++)
+            {
+                if (i == m) { lpw1[i].Y += 1.0 - lpw2[i].Y; } else
+                {
+                    lpw1[i].Y -= lpw2[i].Y;
+                }
+            }
+            return lpw1;
         }
     }
 }

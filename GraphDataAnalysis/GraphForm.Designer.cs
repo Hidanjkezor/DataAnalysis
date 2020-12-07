@@ -32,7 +32,6 @@
             this.zedGraphControl1 = new ZedGraph.ZedGraphControl();
             this.zedGraphControl2 = new ZedGraph.ZedGraphControl();
             this.zedGraphControl3 = new ZedGraph.ZedGraphControl();
-            this.zedGraphControl4 = new ZedGraph.ZedGraphControl();
             this.numericUpDownGraphNo = new System.Windows.Forms.NumericUpDown();
             this.graphLabel = new System.Windows.Forms.Label();
             this.dtLabel = new System.Windows.Forms.Label();
@@ -67,60 +66,103 @@
             this.clearButton = new System.Windows.Forms.Button();
             this.mergeButton = new System.Windows.Forms.Button();
             this.openAnalyserButton = new System.Windows.Forms.Button();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.plotter_dat_button = new System.Windows.Forms.Button();
+            this.dataFilePath_textBox = new System.Windows.Forms.TextBox();
+            this.Open_File_button = new System.Windows.Forms.Button();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.anti_noise = new System.Windows.Forms.Button();
+            this.with_grph = new System.Windows.Forms.CheckBox();
+            this.anti_noise_n = new System.Windows.Forms.Label();
+            this.anti_noise_n_text_box = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.shiftButton = new System.Windows.Forms.Button();
             this.shiftValueLabel = new System.Windows.Forms.Label();
             this.shiftValueTextBox = new System.Windows.Forms.TextBox();
             this.AntiShiftGroupBox = new System.Windows.Forms.GroupBox();
             this.antiShiftButton = new System.Windows.Forms.Button();
-            this.antiSpikeGroupBox = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.antiSpikeSTextBox = new System.Windows.Forms.TextBox();
-            this.proceedAntiSpikeButton = new System.Windows.Forms.Button();
+            this.BadHeatButton = new System.Windows.Forms.Button();
             this.spikeGroupBox = new System.Windows.Forms.GroupBox();
             this.spikeCountTextbox = new System.Windows.Forms.TextBox();
             this.countLabel = new System.Windows.Forms.Label();
             this.spikeSizeLabel = new System.Windows.Forms.Label();
             this.spikeSizeTextbox = new System.Windows.Forms.TextBox();
             this.addSpikesButton = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.antiSpikeGroupBox = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.antiSpikeSTextBox = new System.Windows.Forms.TextBox();
+            this.proceedAntiSpikeButton = new System.Windows.Forms.Button();
+            this.CardioPlotter = new System.Windows.Forms.Button();
             this.AntiTrendGroupBox = new System.Windows.Forms.GroupBox();
             this.ExecAntiTrendButton = new System.Windows.Forms.Button();
             this.WindowSizeLabel = new System.Windows.Forms.Label();
             this.WindowSizeTextBox = new System.Windows.Forms.TextBox();
-            this.CardioPlotter = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.BadHeatButton = new System.Windows.Forms.Button();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.anti_noise = new System.Windows.Forms.Button();
-            this.with_grph = new System.Windows.Forms.CheckBox();
-            this.anti_noise_n = new System.Windows.Forms.Label();
-            this.anti_noise_n_text_box = new System.Windows.Forms.TextBox();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.applyBsPotterButton = new System.Windows.Forms.Button();
+            this.label15 = new System.Windows.Forms.Label();
+            this.bs_fc_2 = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.bs_m = new System.Windows.Forms.TextBox();
+            this.Potter_BS_button = new System.Windows.Forms.Button();
+            this.label14 = new System.Windows.Forms.Label();
+            this.bs_fc1 = new System.Windows.Forms.TextBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.applyBpFilterButton = new System.Windows.Forms.Button();
+            this.label16 = new System.Windows.Forms.Label();
+            this.bp_fc_2 = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.bp_m = new System.Windows.Forms.TextBox();
+            this.Potter_BP_button = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
+            this.bp_fc1 = new System.Windows.Forms.TextBox();
+            this.Potter_HPF = new System.Windows.Forms.GroupBox();
+            this.applyHpFilterButton = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.m_Hp = new System.Windows.Forms.TextBox();
+            this.Potter_HPF_button = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.fc_Hp = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.applyLpFilterButton = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.m_textBox = new System.Windows.Forms.TextBox();
             this.Potter_button = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.fc_textBox = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.dt_textBox = new System.Windows.Forms.TextBox();
+            this.zedGraphControl4 = new ZedGraph.ZedGraphControl();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.plot_for_wav_button = new System.Windows.Forms.Button();
+            this.Wav_textbox = new System.Windows.Forms.TextBox();
+            this.Wav_OpenButton = new System.Windows.Forms.Button();
+            this.Save_wav_button = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownGraphNo)).BeginInit();
             this.linearGroupBox.SuspendLayout();
             this.ExpGoupBox.SuspendLayout();
             this.randomGroupBox.SuspendLayout();
             this.sinGroupBox.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            this.AntiShiftGroupBox.SuspendLayout();
-            this.antiSpikeGroupBox.SuspendLayout();
-            this.spikeGroupBox.SuspendLayout();
-            this.AntiTrendGroupBox.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.groupBox6.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.AntiShiftGroupBox.SuspendLayout();
+            this.spikeGroupBox.SuspendLayout();
+            this.antiSpikeGroupBox.SuspendLayout();
+            this.AntiTrendGroupBox.SuspendLayout();
+            this.tabPage3.SuspendLayout();
+            this.groupBox5.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            this.Potter_HPF.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.tabPage4.SuspendLayout();
+            this.groupBox7.SuspendLayout();
             this.SuspendLayout();
             // 
             // zedGraphControl1
@@ -167,21 +209,6 @@
             this.zedGraphControl3.Size = new System.Drawing.Size(416, 282);
             this.zedGraphControl3.TabIndex = 2;
             this.zedGraphControl3.UseExtendedPrintDialog = true;
-            // 
-            // zedGraphControl4
-            // 
-            this.zedGraphControl4.Location = new System.Drawing.Point(434, 300);
-            this.zedGraphControl4.Name = "zedGraphControl4";
-            this.zedGraphControl4.ScrollGrace = 0D;
-            this.zedGraphControl4.ScrollMaxX = 0D;
-            this.zedGraphControl4.ScrollMaxY = 0D;
-            this.zedGraphControl4.ScrollMaxY2 = 0D;
-            this.zedGraphControl4.ScrollMinX = 0D;
-            this.zedGraphControl4.ScrollMinY = 0D;
-            this.zedGraphControl4.ScrollMinY2 = 0D;
-            this.zedGraphControl4.Size = new System.Drawing.Size(416, 282);
-            this.zedGraphControl4.TabIndex = 3;
-            this.zedGraphControl4.UseExtendedPrintDialog = true;
             // 
             // numericUpDownGraphNo
             // 
@@ -531,6 +558,143 @@
             this.openAnalyserButton.UseVisualStyleBackColor = true;
             this.openAnalyserButton.Click += new System.EventHandler(this.openAnalyserButton_Click);
             // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Controls.Add(this.tabPage4);
+            this.tabControl1.Location = new System.Drawing.Point(856, 64);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(356, 372);
+            this.tabControl1.TabIndex = 25;
+            this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.BackColor = System.Drawing.Color.White;
+            this.tabPage1.Controls.Add(this.groupBox6);
+            this.tabPage1.Controls.Add(this.sinGroupBox);
+            this.tabPage1.Controls.Add(this.linearGroupBox);
+            this.tabPage1.Controls.Add(this.ExpGoupBox);
+            this.tabPage1.Controls.Add(this.randomGroupBox);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(348, 346);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "tabPage1";
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.plotter_dat_button);
+            this.groupBox6.Controls.Add(this.dataFilePath_textBox);
+            this.groupBox6.Controls.Add(this.Open_File_button);
+            this.groupBox6.Location = new System.Drawing.Point(0, 231);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(344, 78);
+            this.groupBox6.TabIndex = 18;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "dat-File";
+            // 
+            // plotter_dat_button
+            // 
+            this.plotter_dat_button.Location = new System.Drawing.Point(261, 45);
+            this.plotter_dat_button.Name = "plotter_dat_button";
+            this.plotter_dat_button.Size = new System.Drawing.Size(75, 23);
+            this.plotter_dat_button.TabIndex = 28;
+            this.plotter_dat_button.Text = "Построить график";
+            this.plotter_dat_button.UseVisualStyleBackColor = true;
+            this.plotter_dat_button.Click += new System.EventHandler(this.plotter_dat_button_Click);
+            // 
+            // dataFilePath_textBox
+            // 
+            this.dataFilePath_textBox.Location = new System.Drawing.Point(9, 19);
+            this.dataFilePath_textBox.Name = "dataFilePath_textBox";
+            this.dataFilePath_textBox.Size = new System.Drawing.Size(246, 20);
+            this.dataFilePath_textBox.TabIndex = 27;
+            // 
+            // Open_File_button
+            // 
+            this.Open_File_button.Location = new System.Drawing.Point(261, 16);
+            this.Open_File_button.Name = "Open_File_button";
+            this.Open_File_button.Size = new System.Drawing.Size(75, 23);
+            this.Open_File_button.TabIndex = 26;
+            this.Open_File_button.Text = "Открыть файл";
+            this.Open_File_button.UseVisualStyleBackColor = true;
+            this.Open_File_button.Click += new System.EventHandler(this.Open_File_button_Click);
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.groupBox2);
+            this.tabPage2.Controls.Add(this.groupBox1);
+            this.tabPage2.Controls.Add(this.AntiShiftGroupBox);
+            this.tabPage2.Controls.Add(this.BadHeatButton);
+            this.tabPage2.Controls.Add(this.spikeGroupBox);
+            this.tabPage2.Controls.Add(this.label1);
+            this.tabPage2.Controls.Add(this.antiSpikeGroupBox);
+            this.tabPage2.Controls.Add(this.CardioPlotter);
+            this.tabPage2.Controls.Add(this.AntiTrendGroupBox);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(348, 346);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.anti_noise);
+            this.groupBox2.Controls.Add(this.with_grph);
+            this.groupBox2.Controls.Add(this.anti_noise_n);
+            this.groupBox2.Controls.Add(this.anti_noise_n_text_box);
+            this.groupBox2.Location = new System.Drawing.Point(101, 222);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(215, 47);
+            this.groupBox2.TabIndex = 20;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Анти-шум";
+            // 
+            // anti_noise
+            // 
+            this.anti_noise.Location = new System.Drawing.Point(62, 17);
+            this.anti_noise.Name = "anti_noise";
+            this.anti_noise.Size = new System.Drawing.Size(75, 23);
+            this.anti_noise.TabIndex = 15;
+            this.anti_noise.Text = "Выполнить";
+            this.anti_noise.UseVisualStyleBackColor = true;
+            this.anti_noise.Click += new System.EventHandler(this.anti_noise_Click);
+            // 
+            // with_grph
+            // 
+            this.with_grph.AutoSize = true;
+            this.with_grph.Location = new System.Drawing.Point(143, 22);
+            this.with_grph.Name = "with_grph";
+            this.with_grph.Size = new System.Drawing.Size(72, 17);
+            this.with_grph.TabIndex = 16;
+            this.with_grph.Text = "with_grph";
+            this.with_grph.UseVisualStyleBackColor = true;
+            // 
+            // anti_noise_n
+            // 
+            this.anti_noise_n.AutoSize = true;
+            this.anti_noise_n.Location = new System.Drawing.Point(6, 22);
+            this.anti_noise_n.Name = "anti_noise_n";
+            this.anti_noise_n.Size = new System.Drawing.Size(13, 13);
+            this.anti_noise_n.TabIndex = 11;
+            this.anti_noise_n.Text = "n";
+            // 
+            // anti_noise_n_text_box
+            // 
+            this.anti_noise_n_text_box.Location = new System.Drawing.Point(21, 19);
+            this.anti_noise_n_text_box.Name = "anti_noise_n_text_box";
+            this.anti_noise_n_text_box.Size = new System.Drawing.Size(35, 20);
+            this.anti_noise_n_text_box.TabIndex = 12;
+            this.anti_noise_n_text_box.Text = "30";
+            this.anti_noise_n_text_box.TextChanged += new System.EventHandler(this.anti_noise_n_text_box_TextChanged);
+            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.shiftButton);
@@ -591,45 +755,15 @@
             this.antiShiftButton.UseVisualStyleBackColor = true;
             this.antiShiftButton.Click += new System.EventHandler(this.antiShiftButton_Click);
             // 
-            // antiSpikeGroupBox
+            // BadHeatButton
             // 
-            this.antiSpikeGroupBox.Controls.Add(this.label2);
-            this.antiSpikeGroupBox.Controls.Add(this.antiSpikeSTextBox);
-            this.antiSpikeGroupBox.Controls.Add(this.proceedAntiSpikeButton);
-            this.antiSpikeGroupBox.Location = new System.Drawing.Point(-3, 55);
-            this.antiSpikeGroupBox.Name = "antiSpikeGroupBox";
-            this.antiSpikeGroupBox.Size = new System.Drawing.Size(216, 47);
-            this.antiSpikeGroupBox.TabIndex = 22;
-            this.antiSpikeGroupBox.TabStop = false;
-            this.antiSpikeGroupBox.Text = "Анти Спайк";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 23);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(14, 13);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "S";
-            // 
-            // antiSpikeSTextBox
-            // 
-            this.antiSpikeSTextBox.Location = new System.Drawing.Point(26, 20);
-            this.antiSpikeSTextBox.Name = "antiSpikeSTextBox";
-            this.antiSpikeSTextBox.Size = new System.Drawing.Size(100, 20);
-            this.antiSpikeSTextBox.TabIndex = 7;
-            this.antiSpikeSTextBox.Text = "100";
-            this.antiSpikeSTextBox.TextChanged += new System.EventHandler(this.DoubleParamTextBox_TextChanged);
-            // 
-            // proceedAntiSpikeButton
-            // 
-            this.proceedAntiSpikeButton.Location = new System.Drawing.Point(132, 18);
-            this.proceedAntiSpikeButton.Name = "proceedAntiSpikeButton";
-            this.proceedAntiSpikeButton.Size = new System.Drawing.Size(75, 23);
-            this.proceedAntiSpikeButton.TabIndex = 0;
-            this.proceedAntiSpikeButton.Text = "Убрать";
-            this.proceedAntiSpikeButton.UseVisualStyleBackColor = true;
-            this.proceedAntiSpikeButton.Click += new System.EventHandler(this.proceedAntiSpikeButton_Click);
+            this.BadHeatButton.Location = new System.Drawing.Point(9, 269);
+            this.BadHeatButton.Name = "BadHeatButton";
+            this.BadHeatButton.Size = new System.Drawing.Size(83, 23);
+            this.BadHeatButton.TabIndex = 24;
+            this.BadHeatButton.Text = "Тахиокардия";
+            this.BadHeatButton.UseVisualStyleBackColor = true;
+            this.BadHeatButton.Click += new System.EventHandler(this.BadHeatButton_Click);
             // 
             // spikeGroupBox
             // 
@@ -691,6 +825,65 @@
             this.addSpikesButton.UseVisualStyleBackColor = true;
             this.addSpikesButton.Click += new System.EventHandler(this.addSpikesButton_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(9, 221);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(83, 13);
+            this.label1.TabIndex = 23;
+            this.label1.Text = "Кардиограмма";
+            // 
+            // antiSpikeGroupBox
+            // 
+            this.antiSpikeGroupBox.Controls.Add(this.label2);
+            this.antiSpikeGroupBox.Controls.Add(this.antiSpikeSTextBox);
+            this.antiSpikeGroupBox.Controls.Add(this.proceedAntiSpikeButton);
+            this.antiSpikeGroupBox.Location = new System.Drawing.Point(-3, 55);
+            this.antiSpikeGroupBox.Name = "antiSpikeGroupBox";
+            this.antiSpikeGroupBox.Size = new System.Drawing.Size(216, 47);
+            this.antiSpikeGroupBox.TabIndex = 22;
+            this.antiSpikeGroupBox.TabStop = false;
+            this.antiSpikeGroupBox.Text = "Анти Спайк";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 23);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(14, 13);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "S";
+            // 
+            // antiSpikeSTextBox
+            // 
+            this.antiSpikeSTextBox.Location = new System.Drawing.Point(26, 20);
+            this.antiSpikeSTextBox.Name = "antiSpikeSTextBox";
+            this.antiSpikeSTextBox.Size = new System.Drawing.Size(100, 20);
+            this.antiSpikeSTextBox.TabIndex = 7;
+            this.antiSpikeSTextBox.Text = "100";
+            this.antiSpikeSTextBox.TextChanged += new System.EventHandler(this.DoubleParamTextBox_TextChanged);
+            // 
+            // proceedAntiSpikeButton
+            // 
+            this.proceedAntiSpikeButton.Location = new System.Drawing.Point(132, 18);
+            this.proceedAntiSpikeButton.Name = "proceedAntiSpikeButton";
+            this.proceedAntiSpikeButton.Size = new System.Drawing.Size(75, 23);
+            this.proceedAntiSpikeButton.TabIndex = 0;
+            this.proceedAntiSpikeButton.Text = "Убрать";
+            this.proceedAntiSpikeButton.UseVisualStyleBackColor = true;
+            this.proceedAntiSpikeButton.Click += new System.EventHandler(this.proceedAntiSpikeButton_Click);
+            // 
+            // CardioPlotter
+            // 
+            this.CardioPlotter.Location = new System.Drawing.Point(6, 240);
+            this.CardioPlotter.Name = "CardioPlotter";
+            this.CardioPlotter.Size = new System.Drawing.Size(75, 23);
+            this.CardioPlotter.TabIndex = 16;
+            this.CardioPlotter.Text = "Выполнить";
+            this.CardioPlotter.UseVisualStyleBackColor = true;
+            this.CardioPlotter.Click += new System.EventHandler(this.CardioPlotter_Click);
+            // 
             // AntiTrendGroupBox
             // 
             this.AntiTrendGroupBox.Controls.Add(this.ExecAntiTrendButton);
@@ -731,144 +924,289 @@
             this.WindowSizeTextBox.Text = "30";
             this.WindowSizeTextBox.TextChanged += new System.EventHandler(this.IntParamTextBox_TextChanged);
             // 
-            // CardioPlotter
+            // tabPage3
             // 
-            this.CardioPlotter.Location = new System.Drawing.Point(6, 240);
-            this.CardioPlotter.Name = "CardioPlotter";
-            this.CardioPlotter.Size = new System.Drawing.Size(75, 23);
-            this.CardioPlotter.TabIndex = 16;
-            this.CardioPlotter.Text = "Выполнить";
-            this.CardioPlotter.UseVisualStyleBackColor = true;
-            this.CardioPlotter.Click += new System.EventHandler(this.CardioPlotter_Click);
+            this.tabPage3.Controls.Add(this.groupBox5);
+            this.tabPage3.Controls.Add(this.groupBox4);
+            this.tabPage3.Controls.Add(this.Potter_HPF);
+            this.tabPage3.Controls.Add(this.groupBox3);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(348, 346);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "tabPage3";
+            this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // groupBox5
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(9, 221);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(83, 13);
-            this.label1.TabIndex = 23;
-            this.label1.Text = "Кардиограмма";
+            this.groupBox5.Controls.Add(this.applyBsPotterButton);
+            this.groupBox5.Controls.Add(this.label15);
+            this.groupBox5.Controls.Add(this.bs_fc_2);
+            this.groupBox5.Controls.Add(this.label13);
+            this.groupBox5.Controls.Add(this.bs_m);
+            this.groupBox5.Controls.Add(this.Potter_BS_button);
+            this.groupBox5.Controls.Add(this.label14);
+            this.groupBox5.Controls.Add(this.bs_fc1);
+            this.groupBox5.Location = new System.Drawing.Point(6, 265);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(318, 75);
+            this.groupBox5.TabIndex = 23;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Поттер РФ";
             // 
-            // BadHeatButton
+            // applyBsPotterButton
             // 
-            this.BadHeatButton.Location = new System.Drawing.Point(9, 269);
-            this.BadHeatButton.Name = "BadHeatButton";
-            this.BadHeatButton.Size = new System.Drawing.Size(83, 23);
-            this.BadHeatButton.TabIndex = 24;
-            this.BadHeatButton.Text = "Тахиокардия";
-            this.BadHeatButton.UseVisualStyleBackColor = true;
-            this.BadHeatButton.Click += new System.EventHandler(this.BadHeatButton_Click);
+            this.applyBsPotterButton.Location = new System.Drawing.Point(237, 46);
+            this.applyBsPotterButton.Name = "applyBsPotterButton";
+            this.applyBsPotterButton.Size = new System.Drawing.Size(75, 23);
+            this.applyBsPotterButton.TabIndex = 23;
+            this.applyBsPotterButton.Text = "Применить";
+            this.applyBsPotterButton.UseVisualStyleBackColor = true;
+            this.applyBsPotterButton.Click += new System.EventHandler(this.applyBsPotterButton_Click);
             // 
-            // groupBox2
+            // label15
             // 
-            this.groupBox2.Controls.Add(this.anti_noise);
-            this.groupBox2.Controls.Add(this.with_grph);
-            this.groupBox2.Controls.Add(this.anti_noise_n);
-            this.groupBox2.Controls.Add(this.anti_noise_n_text_box);
-            this.groupBox2.Location = new System.Drawing.Point(101, 222);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(215, 47);
-            this.groupBox2.TabIndex = 20;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Анти-шум";
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(57, 22);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(22, 13);
+            this.label15.TabIndex = 21;
+            this.label15.Text = "fc2";
             // 
-            // anti_noise
+            // bs_fc_2
             // 
-            this.anti_noise.Location = new System.Drawing.Point(62, 17);
-            this.anti_noise.Name = "anti_noise";
-            this.anti_noise.Size = new System.Drawing.Size(75, 23);
-            this.anti_noise.TabIndex = 15;
-            this.anti_noise.Text = "Выполнить";
-            this.anti_noise.UseVisualStyleBackColor = true;
-            this.anti_noise.Click += new System.EventHandler(this.anti_noise_Click);
+            this.bs_fc_2.Location = new System.Drawing.Point(91, 19);
+            this.bs_fc_2.Name = "bs_fc_2";
+            this.bs_fc_2.Size = new System.Drawing.Size(23, 20);
+            this.bs_fc_2.TabIndex = 20;
+            this.bs_fc_2.Text = "60";
             // 
-            // with_grph
+            // label13
             // 
-            this.with_grph.AutoSize = true;
-            this.with_grph.Location = new System.Drawing.Point(143, 22);
-            this.with_grph.Name = "with_grph";
-            this.with_grph.Size = new System.Drawing.Size(72, 17);
-            this.with_grph.TabIndex = 16;
-            this.with_grph.Text = "with_grph";
-            this.with_grph.UseVisualStyleBackColor = true;
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(120, 22);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(15, 13);
+            this.label13.TabIndex = 16;
+            this.label13.Text = "m";
             // 
-            // anti_noise_n
+            // bs_m
             // 
-            this.anti_noise_n.AutoSize = true;
-            this.anti_noise_n.Location = new System.Drawing.Point(6, 22);
-            this.anti_noise_n.Name = "anti_noise_n";
-            this.anti_noise_n.Size = new System.Drawing.Size(13, 13);
-            this.anti_noise_n.TabIndex = 11;
-            this.anti_noise_n.Text = "n";
+            this.bs_m.Location = new System.Drawing.Point(141, 19);
+            this.bs_m.Name = "bs_m";
+            this.bs_m.Size = new System.Drawing.Size(23, 20);
+            this.bs_m.TabIndex = 17;
+            this.bs_m.Text = "64";
             // 
-            // anti_noise_n_text_box
+            // Potter_BS_button
             // 
-            this.anti_noise_n_text_box.Location = new System.Drawing.Point(21, 19);
-            this.anti_noise_n_text_box.Name = "anti_noise_n_text_box";
-            this.anti_noise_n_text_box.Size = new System.Drawing.Size(35, 20);
-            this.anti_noise_n_text_box.TabIndex = 12;
-            this.anti_noise_n_text_box.Text = "30";
+            this.Potter_BS_button.Location = new System.Drawing.Point(237, 19);
+            this.Potter_BS_button.Name = "Potter_BS_button";
+            this.Potter_BS_button.Size = new System.Drawing.Size(75, 23);
+            this.Potter_BS_button.TabIndex = 15;
+            this.Potter_BS_button.Text = "Выполнить";
+            this.Potter_BS_button.UseVisualStyleBackColor = true;
+            this.Potter_BS_button.Click += new System.EventHandler(this.Potter_BS_button_Click);
             // 
-            // tabControl1
+            // label14
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(856, 64);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(353, 412);
-            this.tabControl1.TabIndex = 25;
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(6, 22);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(22, 13);
+            this.label14.TabIndex = 11;
+            this.label14.Text = "fc1";
             // 
-            // tabPage1
+            // bs_fc1
             // 
-            this.tabPage1.BackColor = System.Drawing.Color.White;
-            this.tabPage1.Controls.Add(this.sinGroupBox);
-            this.tabPage1.Controls.Add(this.linearGroupBox);
-            this.tabPage1.Controls.Add(this.ExpGoupBox);
-            this.tabPage1.Controls.Add(this.randomGroupBox);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(345, 386);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "tabPage1";
+            this.bs_fc1.Location = new System.Drawing.Point(28, 19);
+            this.bs_fc1.Name = "bs_fc1";
+            this.bs_fc1.Size = new System.Drawing.Size(23, 20);
+            this.bs_fc1.TabIndex = 12;
+            this.bs_fc1.Text = "25";
             // 
-            // tabPage2
+            // groupBox4
             // 
-            this.tabPage2.Controls.Add(this.groupBox3);
-            this.tabPage2.Controls.Add(this.groupBox2);
-            this.tabPage2.Controls.Add(this.groupBox1);
-            this.tabPage2.Controls.Add(this.AntiShiftGroupBox);
-            this.tabPage2.Controls.Add(this.BadHeatButton);
-            this.tabPage2.Controls.Add(this.spikeGroupBox);
-            this.tabPage2.Controls.Add(this.label1);
-            this.tabPage2.Controls.Add(this.antiSpikeGroupBox);
-            this.tabPage2.Controls.Add(this.CardioPlotter);
-            this.tabPage2.Controls.Add(this.AntiTrendGroupBox);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(345, 386);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.groupBox4.Controls.Add(this.applyBpFilterButton);
+            this.groupBox4.Controls.Add(this.label16);
+            this.groupBox4.Controls.Add(this.bp_fc_2);
+            this.groupBox4.Controls.Add(this.label10);
+            this.groupBox4.Controls.Add(this.bp_m);
+            this.groupBox4.Controls.Add(this.Potter_BP_button);
+            this.groupBox4.Controls.Add(this.label11);
+            this.groupBox4.Controls.Add(this.bp_fc1);
+            this.groupBox4.Location = new System.Drawing.Point(6, 183);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(318, 76);
+            this.groupBox4.TabIndex = 22;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Поттер ПФ";
+            // 
+            // applyBpFilterButton
+            // 
+            this.applyBpFilterButton.Location = new System.Drawing.Point(239, 48);
+            this.applyBpFilterButton.Name = "applyBpFilterButton";
+            this.applyBpFilterButton.Size = new System.Drawing.Size(75, 23);
+            this.applyBpFilterButton.TabIndex = 22;
+            this.applyBpFilterButton.Text = "Применить";
+            this.applyBpFilterButton.UseVisualStyleBackColor = true;
+            this.applyBpFilterButton.Click += new System.EventHandler(this.applyBpFilterButton_Click);
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(63, 22);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(22, 13);
+            this.label16.TabIndex = 20;
+            this.label16.Text = "fc2";
+            // 
+            // bp_fc_2
+            // 
+            this.bp_fc_2.Location = new System.Drawing.Point(85, 19);
+            this.bp_fc_2.Name = "bp_fc_2";
+            this.bp_fc_2.Size = new System.Drawing.Size(23, 20);
+            this.bp_fc_2.TabIndex = 21;
+            this.bp_fc_2.Text = "40";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(121, 21);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(15, 13);
+            this.label10.TabIndex = 16;
+            this.label10.Text = "m";
+            // 
+            // bp_m
+            // 
+            this.bp_m.Location = new System.Drawing.Point(140, 18);
+            this.bp_m.Name = "bp_m";
+            this.bp_m.Size = new System.Drawing.Size(23, 20);
+            this.bp_m.TabIndex = 17;
+            this.bp_m.Text = "64";
+            // 
+            // Potter_BP_button
+            // 
+            this.Potter_BP_button.Location = new System.Drawing.Point(237, 19);
+            this.Potter_BP_button.Name = "Potter_BP_button";
+            this.Potter_BP_button.Size = new System.Drawing.Size(75, 23);
+            this.Potter_BP_button.TabIndex = 15;
+            this.Potter_BP_button.Text = "Выполнить";
+            this.Potter_BP_button.UseVisualStyleBackColor = true;
+            this.Potter_BP_button.Click += new System.EventHandler(this.Potter_BP_button_Click);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(6, 22);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(16, 13);
+            this.label11.TabIndex = 11;
+            this.label11.Text = "fc";
+            // 
+            // bp_fc1
+            // 
+            this.bp_fc1.Location = new System.Drawing.Point(28, 19);
+            this.bp_fc1.Name = "bp_fc1";
+            this.bp_fc1.Size = new System.Drawing.Size(23, 20);
+            this.bp_fc1.TabIndex = 12;
+            this.bp_fc1.Text = "25";
+            // 
+            // Potter_HPF
+            // 
+            this.Potter_HPF.Controls.Add(this.applyHpFilterButton);
+            this.Potter_HPF.Controls.Add(this.label7);
+            this.Potter_HPF.Controls.Add(this.m_Hp);
+            this.Potter_HPF.Controls.Add(this.Potter_HPF_button);
+            this.Potter_HPF.Controls.Add(this.label8);
+            this.Potter_HPF.Controls.Add(this.fc_Hp);
+            this.Potter_HPF.Location = new System.Drawing.Point(6, 94);
+            this.Potter_HPF.Name = "Potter_HPF";
+            this.Potter_HPF.Size = new System.Drawing.Size(264, 83);
+            this.Potter_HPF.TabIndex = 21;
+            this.Potter_HPF.TabStop = false;
+            this.Potter_HPF.Text = "Поттер ФВЧ";
+            // 
+            // applyHpFilterButton
+            // 
+            this.applyHpFilterButton.Location = new System.Drawing.Point(174, 49);
+            this.applyHpFilterButton.Name = "applyHpFilterButton";
+            this.applyHpFilterButton.Size = new System.Drawing.Size(75, 23);
+            this.applyHpFilterButton.TabIndex = 21;
+            this.applyHpFilterButton.Text = "Применить";
+            this.applyHpFilterButton.UseVisualStyleBackColor = true;
+            this.applyHpFilterButton.Click += new System.EventHandler(this.applyHpFilterButton_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(57, 22);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(15, 13);
+            this.label7.TabIndex = 16;
+            this.label7.Text = "m";
+            // 
+            // m_Hp
+            // 
+            this.m_Hp.Location = new System.Drawing.Point(76, 19);
+            this.m_Hp.Name = "m_Hp";
+            this.m_Hp.Size = new System.Drawing.Size(23, 20);
+            this.m_Hp.TabIndex = 17;
+            this.m_Hp.Text = "64";
+            // 
+            // Potter_HPF_button
+            // 
+            this.Potter_HPF_button.Location = new System.Drawing.Point(173, 20);
+            this.Potter_HPF_button.Name = "Potter_HPF_button";
+            this.Potter_HPF_button.Size = new System.Drawing.Size(75, 23);
+            this.Potter_HPF_button.TabIndex = 15;
+            this.Potter_HPF_button.Text = "Выполнить";
+            this.Potter_HPF_button.UseVisualStyleBackColor = true;
+            this.Potter_HPF_button.Click += new System.EventHandler(this.Potter_HPF_button_Click);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(6, 22);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(16, 13);
+            this.label8.TabIndex = 11;
+            this.label8.Text = "fc";
+            // 
+            // fc_Hp
+            // 
+            this.fc_Hp.Location = new System.Drawing.Point(28, 19);
+            this.fc_Hp.Name = "fc_Hp";
+            this.fc_Hp.Size = new System.Drawing.Size(23, 20);
+            this.fc_Hp.TabIndex = 12;
+            this.fc_Hp.Text = "25";
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.label5);
-            this.groupBox3.Controls.Add(this.dt_textBox);
+            this.groupBox3.Controls.Add(this.applyLpFilterButton);
             this.groupBox3.Controls.Add(this.label4);
             this.groupBox3.Controls.Add(this.m_textBox);
             this.groupBox3.Controls.Add(this.Potter_button);
             this.groupBox3.Controls.Add(this.label3);
             this.groupBox3.Controls.Add(this.fc_textBox);
-            this.groupBox3.Location = new System.Drawing.Point(12, 298);
+            this.groupBox3.Location = new System.Drawing.Point(6, 6);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(264, 51);
+            this.groupBox3.Size = new System.Drawing.Size(261, 82);
             this.groupBox3.TabIndex = 20;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Поттер";
+            this.groupBox3.Text = "Поттер ФНЧ";
+            // 
+            // applyLpFilterButton
+            // 
+            this.applyLpFilterButton.Location = new System.Drawing.Point(174, 49);
+            this.applyLpFilterButton.Name = "applyLpFilterButton";
+            this.applyLpFilterButton.Size = new System.Drawing.Size(75, 23);
+            this.applyLpFilterButton.TabIndex = 20;
+            this.applyLpFilterButton.Text = "Применить";
+            this.applyLpFilterButton.UseVisualStyleBackColor = true;
+            this.applyLpFilterButton.Click += new System.EventHandler(this.applyLpFilterButton_Click);
             // 
             // label4
             // 
@@ -914,22 +1252,81 @@
             this.fc_textBox.TabIndex = 12;
             this.fc_textBox.Text = "25";
             // 
-            // label5
+            // zedGraphControl4
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(107, 22);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(16, 13);
-            this.label5.TabIndex = 18;
-            this.label5.Text = "dt";
+            this.zedGraphControl4.Location = new System.Drawing.Point(434, 300);
+            this.zedGraphControl4.Name = "zedGraphControl4";
+            this.zedGraphControl4.ScrollGrace = 0D;
+            this.zedGraphControl4.ScrollMaxX = 0D;
+            this.zedGraphControl4.ScrollMaxY = 0D;
+            this.zedGraphControl4.ScrollMaxY2 = 0D;
+            this.zedGraphControl4.ScrollMinX = 0D;
+            this.zedGraphControl4.ScrollMinY = 0D;
+            this.zedGraphControl4.ScrollMinY2 = 0D;
+            this.zedGraphControl4.Size = new System.Drawing.Size(416, 282);
+            this.zedGraphControl4.TabIndex = 3;
+            this.zedGraphControl4.UseExtendedPrintDialog = true;
             // 
-            // dt_textBox
+            // tabPage4
             // 
-            this.dt_textBox.Location = new System.Drawing.Point(123, 20);
-            this.dt_textBox.Name = "dt_textBox";
-            this.dt_textBox.Size = new System.Drawing.Size(35, 20);
-            this.dt_textBox.TabIndex = 19;
-            this.dt_textBox.Text = "0.01";
+            this.tabPage4.Controls.Add(this.groupBox7);
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(348, 346);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "tabPage4";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(this.Save_wav_button);
+            this.groupBox7.Controls.Add(this.plot_for_wav_button);
+            this.groupBox7.Controls.Add(this.Wav_textbox);
+            this.groupBox7.Controls.Add(this.Wav_OpenButton);
+            this.groupBox7.Location = new System.Drawing.Point(1, 18);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(344, 78);
+            this.groupBox7.TabIndex = 32;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "Wav-File";
+            // 
+            // plot_for_wav_button
+            // 
+            this.plot_for_wav_button.Location = new System.Drawing.Point(261, 45);
+            this.plot_for_wav_button.Name = "plot_for_wav_button";
+            this.plot_for_wav_button.Size = new System.Drawing.Size(75, 23);
+            this.plot_for_wav_button.TabIndex = 28;
+            this.plot_for_wav_button.Text = "Построить график";
+            this.plot_for_wav_button.UseVisualStyleBackColor = true;
+            this.plot_for_wav_button.Click += new System.EventHandler(this.plot_for_wav_button_Click);
+            // 
+            // Wav_textbox
+            // 
+            this.Wav_textbox.Location = new System.Drawing.Point(9, 19);
+            this.Wav_textbox.Name = "Wav_textbox";
+            this.Wav_textbox.Size = new System.Drawing.Size(246, 20);
+            this.Wav_textbox.TabIndex = 27;
+            // 
+            // Wav_OpenButton
+            // 
+            this.Wav_OpenButton.Location = new System.Drawing.Point(261, 16);
+            this.Wav_OpenButton.Name = "Wav_OpenButton";
+            this.Wav_OpenButton.Size = new System.Drawing.Size(75, 23);
+            this.Wav_OpenButton.TabIndex = 26;
+            this.Wav_OpenButton.Text = "Открыть файл";
+            this.Wav_OpenButton.UseVisualStyleBackColor = true;
+            this.Wav_OpenButton.Click += new System.EventHandler(this.Wav_OpenButton_Click);
+            // 
+            // Save_wav_button
+            // 
+            this.Save_wav_button.Location = new System.Drawing.Point(180, 45);
+            this.Save_wav_button.Name = "Save_wav_button";
+            this.Save_wav_button.Size = new System.Drawing.Size(75, 23);
+            this.Save_wav_button.TabIndex = 29;
+            this.Save_wav_button.Text = "Сохранить";
+            this.Save_wav_button.UseVisualStyleBackColor = true;
+            this.Save_wav_button.Click += new System.EventHandler(this.Save_wav_button_Click);
             // 
             // GraphForm
             // 
@@ -963,23 +1360,35 @@
             this.randomGroupBox.PerformLayout();
             this.sinGroupBox.ResumeLayout(false);
             this.sinGroupBox.PerformLayout();
+            this.tabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.AntiShiftGroupBox.ResumeLayout(false);
-            this.antiSpikeGroupBox.ResumeLayout(false);
-            this.antiSpikeGroupBox.PerformLayout();
             this.spikeGroupBox.ResumeLayout(false);
             this.spikeGroupBox.PerformLayout();
+            this.antiSpikeGroupBox.ResumeLayout(false);
+            this.antiSpikeGroupBox.PerformLayout();
             this.AntiTrendGroupBox.ResumeLayout(false);
             this.AntiTrendGroupBox.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
+            this.tabPage3.ResumeLayout(false);
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
+            this.Potter_HPF.ResumeLayout(false);
+            this.Potter_HPF.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            this.tabPage4.ResumeLayout(false);
+            this.groupBox7.ResumeLayout(false);
+            this.groupBox7.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -990,7 +1399,6 @@
         private ZedGraph.ZedGraphControl zedGraphControl1;
         private ZedGraph.ZedGraphControl zedGraphControl2;
         private ZedGraph.ZedGraphControl zedGraphControl3;
-        private ZedGraph.ZedGraphControl zedGraphControl4;
         private System.Windows.Forms.NumericUpDown numericUpDownGraphNo;
         private System.Windows.Forms.Label graphLabel;
         private System.Windows.Forms.Label dtLabel;
@@ -1025,34 +1433,6 @@
         private System.Windows.Forms.Button clearButton;
         private System.Windows.Forms.Button mergeButton;
         private System.Windows.Forms.Button openAnalyserButton;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button shiftButton;
-        private System.Windows.Forms.Label shiftValueLabel;
-        private System.Windows.Forms.TextBox shiftValueTextBox;
-        private System.Windows.Forms.GroupBox AntiShiftGroupBox;
-        private System.Windows.Forms.Button antiShiftButton;
-        private System.Windows.Forms.GroupBox antiSpikeGroupBox;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox antiSpikeSTextBox;
-        private System.Windows.Forms.Button proceedAntiSpikeButton;
-        private System.Windows.Forms.GroupBox spikeGroupBox;
-        private System.Windows.Forms.TextBox spikeCountTextbox;
-        private System.Windows.Forms.Label countLabel;
-        private System.Windows.Forms.Label spikeSizeLabel;
-        private System.Windows.Forms.TextBox spikeSizeTextbox;
-        private System.Windows.Forms.Button addSpikesButton;
-        private System.Windows.Forms.GroupBox AntiTrendGroupBox;
-        private System.Windows.Forms.Button ExecAntiTrendButton;
-        private System.Windows.Forms.Label WindowSizeLabel;
-        private System.Windows.Forms.TextBox WindowSizeTextBox;
-        private System.Windows.Forms.Button CardioPlotter;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button BadHeatButton;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button anti_noise;
-        private System.Windows.Forms.Label anti_noise_n;
-        private System.Windows.Forms.TextBox anti_noise_n_text_box;
-        private System.Windows.Forms.CheckBox with_grph;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
@@ -1062,8 +1442,72 @@
         private System.Windows.Forms.Button Potter_button;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox fc_textBox;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox dt_textBox;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button anti_noise;
+        private System.Windows.Forms.CheckBox with_grph;
+        private System.Windows.Forms.Label anti_noise_n;
+        private System.Windows.Forms.TextBox anti_noise_n_text_box;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button shiftButton;
+        private System.Windows.Forms.Label shiftValueLabel;
+        private System.Windows.Forms.TextBox shiftValueTextBox;
+        private System.Windows.Forms.GroupBox AntiShiftGroupBox;
+        private System.Windows.Forms.Button antiShiftButton;
+        private System.Windows.Forms.Button BadHeatButton;
+        private System.Windows.Forms.GroupBox spikeGroupBox;
+        private System.Windows.Forms.TextBox spikeCountTextbox;
+        private System.Windows.Forms.Label countLabel;
+        private System.Windows.Forms.Label spikeSizeLabel;
+        private System.Windows.Forms.TextBox spikeSizeTextbox;
+        private System.Windows.Forms.Button addSpikesButton;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.GroupBox antiSpikeGroupBox;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox antiSpikeSTextBox;
+        private System.Windows.Forms.Button proceedAntiSpikeButton;
+        private System.Windows.Forms.Button CardioPlotter;
+        private System.Windows.Forms.GroupBox AntiTrendGroupBox;
+        private System.Windows.Forms.Button ExecAntiTrendButton;
+        private System.Windows.Forms.Label WindowSizeLabel;
+        private System.Windows.Forms.TextBox WindowSizeTextBox;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.GroupBox Potter_HPF;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox m_Hp;
+        private System.Windows.Forms.Button Potter_HPF_button;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox fc_Hp;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox bp_m;
+        private System.Windows.Forms.Button Potter_BP_button;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox bp_fc1;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox bs_m;
+        private System.Windows.Forms.Button Potter_BS_button;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox bs_fc1;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TextBox bs_fc_2;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.TextBox bp_fc_2;
+        private System.Windows.Forms.Button Open_File_button;
+        private System.Windows.Forms.TextBox dataFilePath_textBox;
+        private System.Windows.Forms.Button plotter_dat_button;
+        private System.Windows.Forms.Button applyLpFilterButton;
+        private System.Windows.Forms.Button applyHpFilterButton;
+        private System.Windows.Forms.Button applyBpFilterButton;
+        private System.Windows.Forms.Button applyBsPotterButton;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private ZedGraph.ZedGraphControl zedGraphControl4;
+        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.Button plot_for_wav_button;
+        private System.Windows.Forms.TextBox Wav_textbox;
+        private System.Windows.Forms.Button Wav_OpenButton;
+        private System.Windows.Forms.Button Save_wav_button;
     }
 }
 
