@@ -62,6 +62,7 @@
       <DependentUpon>GraphForm.cs</DependentUpon>
     </Compile>
     <Compile Include="MyClasses\Analyser.cs" />
+    <Compile Include="MyClasses\DTMF.cs" />
     <Compile Include="MyClasses\FileOperation.cs" />
     <Compile Include="MyClasses\GraphConverter.cs" />
     <Compile Include="MyClasses\GraphEditor.cs" />

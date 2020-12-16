@@ -6,7 +6,6 @@ using System.IO;
 using System.Windows.Forms;
 using GraphDataAnalysis.MyClasses;
 using ZedGraph;
-
 namespace GraphDataAnalysis
 {
     public partial class GraphForm : Form
@@ -23,6 +22,10 @@ namespace GraphDataAnalysis
                 zedGraphControl3,
                 zedGraphControl4
             };
+            zedGraphControl1.GraphPane.Title.Text = "";
+            zedGraphControl2.GraphPane.Title.Text = "";
+            zedGraphControl3.GraphPane.Title.Text = "";
+            zedGraphControl4.GraphPane.Title.Text = "";
         }
 
         private void DoubleParamTextBox_TextChanged(object sender, EventArgs e)
@@ -498,6 +501,64 @@ namespace GraphDataAnalysis
                     Wav.WritePplToWav(Save_wave.FileName, x);
                 }
             }
+        }
+
+        private void dtmf_plot_button_Click(object sender, EventArgs e)
+        {
+            var flag = true;
+            flag &= double.TryParse(Rate_Texbox.Text.Replace('.', ','), out var sample_rate);
+            string dtmf_c = dtmf_textbox.Text;
+            if (!flag)
+            {
+                MessageBox.Show("Не все данные в правильном формате!", "Ошибка", MessageBoxButtons.OK);
+                return;
+            }
+
+           var res = DTMF.dtmf_from_label(dtmf_c, sample_rate);
+           Plotter.Draw(_controlZgcList[(int)numericUpDownGraphNo.Value - 1], res, "DTMF");
+        }
+
+        private void convert_rateDT_button_Click(object sender, EventArgs e)
+        {
+            
+
+
+            var parsed = true;
+            parsed &= double.TryParse(Rate_to_dt_textBox.Text.Replace('.', ','), out var sampleRate);
+
+            if (!parsed)
+                //TODO: parse error
+                return;
+
+            dtTextBox.Text = $"{(1.0 / sampleRate).ToString("0." + new string('#', 339))}";
+        }
+
+        private void cut_button_Click(object sender, EventArgs e)
+        {
+            var parsed = double.TryParse(cut_from_textbox.Text.Replace('.', ','), out var from);
+                parsed &= double.TryParse(cut_to_texbox.Text.Replace('.', ','), out var to);
+
+                if (!parsed)
+                    return;
+
+                var curve = _controlZgcList[(int)numericUpDownGraphNo.Value - 1].GraphPane.CurveList[0];
+                for (int i = 0; i < curve.Points.Count; i++)
+                {
+                    if (curve.Points[i].X > to || curve.Points[i].X < from)
+                    {
+                        curve.RemovePoint(i--);
+                    }
+                }
+
+                for (int i = 1; i < curve.Points.Count; i++)
+                {
+                    curve.Points[i].X -= curve.Points[0].X;
+                }
+                curve.Points[0].X = 0;
+
+                _controlZgcList[(int)numericUpDownGraphNo.Value - 1].AxisChange();
+                _controlZgcList[(int)numericUpDownGraphNo.Value - 1].Invalidate();
+          
         }
     }
 }

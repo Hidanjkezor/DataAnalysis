@@ -301,7 +301,7 @@ namespace GraphDataAnalysis.MyClasses
             return ans;
         }
 
-        public static PointPairList GetRe(PointPairList ppl, bool normalization)
+        public static PointPairList GetRe(PointPairList ppl, bool normalization) // 
         {
             var res = new PointPairList();
             for (var n = 0; n < ppl.Count; n++)
@@ -316,7 +316,7 @@ namespace GraphDataAnalysis.MyClasses
             return res;
         }
 
-        public static PointPairList GetIm(PointPairList ppl, bool normalization)
+        public static PointPairList GetIm(PointPairList ppl, bool normalization) // комплексное (мнимая часть)
         {
             var res = new PointPairList();
             for (var n = 0; n < ppl.Count; n++)
@@ -406,6 +406,7 @@ namespace GraphDataAnalysis.MyClasses
 
         public static PointPairList GetConvolution(PointPairList x, PointPairList h)
         {
+            var dt = x[1].X - x[0].X;
             var N = x.Count;
             var M = h.Count;
             var res = new PointPairList();
@@ -418,7 +419,7 @@ namespace GraphDataAnalysis.MyClasses
                         continue;
                     sum += h[j].Y * x[k - j].Y;
                 }
-                res.Add(k, sum);
+                res.Add(dt* k, sum);
             }
             return res;
         }
@@ -541,5 +542,6 @@ namespace GraphDataAnalysis.MyClasses
             }
             return lpw1;
         }
+ 
     }
 }

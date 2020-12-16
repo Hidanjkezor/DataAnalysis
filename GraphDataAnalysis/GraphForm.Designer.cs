@@ -134,13 +134,28 @@
             this.Potter_button = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.fc_textBox = new System.Windows.Forms.TextBox();
-            this.zedGraphControl4 = new ZedGraph.ZedGraphControl();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.Save_wav_button = new System.Windows.Forms.Button();
             this.plot_for_wav_button = new System.Windows.Forms.Button();
             this.Wav_textbox = new System.Windows.Forms.TextBox();
             this.Wav_OpenButton = new System.Windows.Forms.Button();
-            this.Save_wav_button = new System.Windows.Forms.Button();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.label6 = new System.Windows.Forms.Label();
+            this.Rate_Texbox = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.dtmf_plot_button = new System.Windows.Forms.Button();
+            this.dtmf_textbox = new System.Windows.Forms.TextBox();
+            this.zedGraphControl4 = new ZedGraph.ZedGraphControl();
+            this.Rate_to_dt_textBox = new System.Windows.Forms.TextBox();
+            this.convert_rateDT_button = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.cut_button = new System.Windows.Forms.Button();
+            this.label12 = new System.Windows.Forms.Label();
+            this.cut_from_textbox = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.cut_to_texbox = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownGraphNo)).BeginInit();
             this.linearGroupBox.SuspendLayout();
             this.ExpGoupBox.SuspendLayout();
@@ -163,6 +178,7 @@
             this.groupBox3.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.groupBox7.SuspendLayout();
+            this.tabPage5.SuspendLayout();
             this.SuspendLayout();
             // 
             // zedGraphControl1
@@ -564,10 +580,11 @@
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage4);
-            this.tabControl1.Location = new System.Drawing.Point(856, 64);
+            this.tabControl1.Controls.Add(this.tabPage5);
+            this.tabControl1.Location = new System.Drawing.Point(856, 107);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(356, 372);
+            this.tabControl1.Size = new System.Drawing.Size(364, 379);
             this.tabControl1.TabIndex = 25;
             this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
@@ -582,9 +599,9 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(348, 346);
+            this.tabPage1.Size = new System.Drawing.Size(356, 346);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "tabPage1";
+            this.tabPage1.Text = "Classic func _data";
             // 
             // groupBox6
             // 
@@ -627,6 +644,12 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.label18);
+            this.tabPage2.Controls.Add(this.cut_to_texbox);
+            this.tabPage2.Controls.Add(this.label17);
+            this.tabPage2.Controls.Add(this.cut_from_textbox);
+            this.tabPage2.Controls.Add(this.label12);
+            this.tabPage2.Controls.Add(this.cut_button);
             this.tabPage2.Controls.Add(this.groupBox2);
             this.tabPage2.Controls.Add(this.groupBox1);
             this.tabPage2.Controls.Add(this.AntiShiftGroupBox);
@@ -639,9 +662,9 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(348, 346);
+            this.tabPage2.Size = new System.Drawing.Size(356, 353);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.Text = "Trend/spikes/cardio";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // groupBox2
@@ -933,9 +956,9 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(348, 346);
+            this.tabPage3.Size = new System.Drawing.Size(356, 346);
             this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "tabPage3";
+            this.tabPage3.Text = "Potter";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // groupBox5
@@ -1252,30 +1275,15 @@
             this.fc_textBox.TabIndex = 12;
             this.fc_textBox.Text = "25";
             // 
-            // zedGraphControl4
-            // 
-            this.zedGraphControl4.Location = new System.Drawing.Point(434, 300);
-            this.zedGraphControl4.Name = "zedGraphControl4";
-            this.zedGraphControl4.ScrollGrace = 0D;
-            this.zedGraphControl4.ScrollMaxX = 0D;
-            this.zedGraphControl4.ScrollMaxY = 0D;
-            this.zedGraphControl4.ScrollMaxY2 = 0D;
-            this.zedGraphControl4.ScrollMinX = 0D;
-            this.zedGraphControl4.ScrollMinY = 0D;
-            this.zedGraphControl4.ScrollMinY2 = 0D;
-            this.zedGraphControl4.Size = new System.Drawing.Size(416, 282);
-            this.zedGraphControl4.TabIndex = 3;
-            this.zedGraphControl4.UseExtendedPrintDialog = true;
-            // 
             // tabPage4
             // 
             this.tabPage4.Controls.Add(this.groupBox7);
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(348, 346);
+            this.tabPage4.Size = new System.Drawing.Size(356, 346);
             this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "tabPage4";
+            this.tabPage4.Text = "Wav";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
             // groupBox7
@@ -1290,6 +1298,16 @@
             this.groupBox7.TabIndex = 32;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Wav-File";
+            // 
+            // Save_wav_button
+            // 
+            this.Save_wav_button.Location = new System.Drawing.Point(180, 45);
+            this.Save_wav_button.Name = "Save_wav_button";
+            this.Save_wav_button.Size = new System.Drawing.Size(75, 23);
+            this.Save_wav_button.TabIndex = 29;
+            this.Save_wav_button.Text = "Сохранить";
+            this.Save_wav_button.UseVisualStyleBackColor = true;
+            this.Save_wav_button.Click += new System.EventHandler(this.Save_wav_button_Click);
             // 
             // plot_for_wav_button
             // 
@@ -1318,21 +1336,165 @@
             this.Wav_OpenButton.UseVisualStyleBackColor = true;
             this.Wav_OpenButton.Click += new System.EventHandler(this.Wav_OpenButton_Click);
             // 
-            // Save_wav_button
+            // tabPage5
             // 
-            this.Save_wav_button.Location = new System.Drawing.Point(180, 45);
-            this.Save_wav_button.Name = "Save_wav_button";
-            this.Save_wav_button.Size = new System.Drawing.Size(75, 23);
-            this.Save_wav_button.TabIndex = 29;
-            this.Save_wav_button.Text = "Сохранить";
-            this.Save_wav_button.UseVisualStyleBackColor = true;
-            this.Save_wav_button.Click += new System.EventHandler(this.Save_wav_button_Click);
+            this.tabPage5.Controls.Add(this.label6);
+            this.tabPage5.Controls.Add(this.Rate_Texbox);
+            this.tabPage5.Controls.Add(this.label5);
+            this.tabPage5.Controls.Add(this.dtmf_plot_button);
+            this.tabPage5.Controls.Add(this.dtmf_textbox);
+            this.tabPage5.Location = new System.Drawing.Point(4, 22);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage5.Size = new System.Drawing.Size(356, 346);
+            this.tabPage5.TabIndex = 4;
+            this.tabPage5.Text = "Coursework";
+            this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(13, 66);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(68, 13);
+            this.label6.TabIndex = 4;
+            this.label6.Text = "Sample Rate";
+            // 
+            // Rate_Texbox
+            // 
+            this.Rate_Texbox.Location = new System.Drawing.Point(16, 82);
+            this.Rate_Texbox.Name = "Rate_Texbox";
+            this.Rate_Texbox.Size = new System.Drawing.Size(100, 20);
+            this.Rate_Texbox.TabIndex = 3;
+            this.Rate_Texbox.Text = "22050";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(13, 15);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(161, 13);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "Введите последовательность:";
+            // 
+            // dtmf_plot_button
+            // 
+            this.dtmf_plot_button.Location = new System.Drawing.Point(214, 28);
+            this.dtmf_plot_button.Name = "dtmf_plot_button";
+            this.dtmf_plot_button.Size = new System.Drawing.Size(75, 23);
+            this.dtmf_plot_button.TabIndex = 1;
+            this.dtmf_plot_button.Text = "Построить";
+            this.dtmf_plot_button.UseVisualStyleBackColor = true;
+            this.dtmf_plot_button.Click += new System.EventHandler(this.dtmf_plot_button_Click);
+            // 
+            // dtmf_textbox
+            // 
+            this.dtmf_textbox.Location = new System.Drawing.Point(16, 31);
+            this.dtmf_textbox.Name = "dtmf_textbox";
+            this.dtmf_textbox.Size = new System.Drawing.Size(158, 20);
+            this.dtmf_textbox.TabIndex = 0;
+            // 
+            // zedGraphControl4
+            // 
+            this.zedGraphControl4.Location = new System.Drawing.Point(434, 300);
+            this.zedGraphControl4.Name = "zedGraphControl4";
+            this.zedGraphControl4.ScrollGrace = 0D;
+            this.zedGraphControl4.ScrollMaxX = 0D;
+            this.zedGraphControl4.ScrollMaxY = 0D;
+            this.zedGraphControl4.ScrollMaxY2 = 0D;
+            this.zedGraphControl4.ScrollMinX = 0D;
+            this.zedGraphControl4.ScrollMinY = 0D;
+            this.zedGraphControl4.ScrollMinY2 = 0D;
+            this.zedGraphControl4.Size = new System.Drawing.Size(416, 282);
+            this.zedGraphControl4.TabIndex = 3;
+            this.zedGraphControl4.UseExtendedPrintDialog = true;
+            // 
+            // Rate_to_dt_textBox
+            // 
+            this.Rate_to_dt_textBox.Location = new System.Drawing.Point(876, 81);
+            this.Rate_to_dt_textBox.Name = "Rate_to_dt_textBox";
+            this.Rate_to_dt_textBox.Size = new System.Drawing.Size(100, 20);
+            this.Rate_to_dt_textBox.TabIndex = 5;
+            this.Rate_to_dt_textBox.Text = "22050";
+            // 
+            // convert_rateDT_button
+            // 
+            this.convert_rateDT_button.Location = new System.Drawing.Point(985, 79);
+            this.convert_rateDT_button.Name = "convert_rateDT_button";
+            this.convert_rateDT_button.Size = new System.Drawing.Size(101, 23);
+            this.convert_rateDT_button.TabIndex = 26;
+            this.convert_rateDT_button.Text = "Конвертировать";
+            this.convert_rateDT_button.UseVisualStyleBackColor = true;
+            this.convert_rateDT_button.Click += new System.EventHandler(this.convert_rateDT_button_Click);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(876, 62);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(60, 13);
+            this.label9.TabIndex = 27;
+            this.label9.Text = "Rate to DT";
+            // 
+            // cut_button
+            // 
+            this.cut_button.Location = new System.Drawing.Point(206, 324);
+            this.cut_button.Name = "cut_button";
+            this.cut_button.Size = new System.Drawing.Size(75, 23);
+            this.cut_button.TabIndex = 25;
+            this.cut_button.Text = "Обрезать запись";
+            this.cut_button.UseVisualStyleBackColor = true;
+            this.cut_button.Click += new System.EventHandler(this.cut_button_Click);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(97, 299);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(109, 13);
+            this.label12.TabIndex = 26;
+            this.label12.Text = "Обрезание графика";
+            // 
+            // cut_from_textbox
+            // 
+            this.cut_from_textbox.Location = new System.Drawing.Point(104, 326);
+            this.cut_from_textbox.Name = "cut_from_textbox";
+            this.cut_from_textbox.Size = new System.Drawing.Size(30, 20);
+            this.cut_from_textbox.TabIndex = 27;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(75, 329);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(20, 13);
+            this.label17.TabIndex = 28;
+            this.label17.Text = "От";
+            // 
+            // cut_to_texbox
+            // 
+            this.cut_to_texbox.Location = new System.Drawing.Point(170, 325);
+            this.cut_to_texbox.Name = "cut_to_texbox";
+            this.cut_to_texbox.Size = new System.Drawing.Size(30, 20);
+            this.cut_to_texbox.TabIndex = 29;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(142, 329);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(22, 13);
+            this.label18.TabIndex = 30;
+            this.label18.Text = "До";
             // 
             // GraphForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1245, 592);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.convert_rateDT_button);
+            this.Controls.Add(this.Rate_to_dt_textBox);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.openAnalyserButton);
             this.Controls.Add(this.mergeButton);
@@ -1389,6 +1551,8 @@
             this.tabPage4.ResumeLayout(false);
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
+            this.tabPage5.ResumeLayout(false);
+            this.tabPage5.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1508,6 +1672,21 @@
         private System.Windows.Forms.TextBox Wav_textbox;
         private System.Windows.Forms.Button Wav_OpenButton;
         private System.Windows.Forms.Button Save_wav_button;
+        private System.Windows.Forms.TabPage tabPage5;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button dtmf_plot_button;
+        private System.Windows.Forms.TextBox dtmf_textbox;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox Rate_Texbox;
+        private System.Windows.Forms.TextBox Rate_to_dt_textBox;
+        private System.Windows.Forms.Button convert_rateDT_button;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Button cut_button;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.TextBox cut_to_texbox;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.TextBox cut_from_textbox;
     }
 }
 
