@@ -73,6 +73,12 @@
             this.dataFilePath_textBox = new System.Windows.Forms.TextBox();
             this.Open_File_button = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.label18 = new System.Windows.Forms.Label();
+            this.cut_to_texbox = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.cut_from_textbox = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.cut_button = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.anti_noise = new System.Windows.Forms.Button();
             this.with_grph = new System.Windows.Forms.CheckBox();
@@ -150,12 +156,10 @@
             this.Rate_to_dt_textBox = new System.Windows.Forms.TextBox();
             this.convert_rateDT_button = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
-            this.cut_button = new System.Windows.Forms.Button();
-            this.label12 = new System.Windows.Forms.Label();
-            this.cut_from_textbox = new System.Windows.Forms.TextBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.cut_to_texbox = new System.Windows.Forms.TextBox();
-            this.label18 = new System.Windows.Forms.Label();
+            this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.Trend_Button = new System.Windows.Forms.Button();
+            this.label19 = new System.Windows.Forms.Label();
+            this.Trend_WindowSize = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownGraphNo)).BeginInit();
             this.linearGroupBox.SuspendLayout();
             this.ExpGoupBox.SuspendLayout();
@@ -179,6 +183,7 @@
             this.tabPage4.SuspendLayout();
             this.groupBox7.SuspendLayout();
             this.tabPage5.SuspendLayout();
+            this.groupBox8.SuspendLayout();
             this.SuspendLayout();
             // 
             // zedGraphControl1
@@ -584,7 +589,7 @@
             this.tabControl1.Location = new System.Drawing.Point(856, 107);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(364, 379);
+            this.tabControl1.Size = new System.Drawing.Size(364, 435);
             this.tabControl1.TabIndex = 25;
             this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
@@ -599,7 +604,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(356, 346);
+            this.tabPage1.Size = new System.Drawing.Size(356, 353);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Classic func _data";
             // 
@@ -644,6 +649,7 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.groupBox8);
             this.tabPage2.Controls.Add(this.label18);
             this.tabPage2.Controls.Add(this.cut_to_texbox);
             this.tabPage2.Controls.Add(this.label17);
@@ -662,10 +668,61 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(356, 353);
+            this.tabPage2.Size = new System.Drawing.Size(356, 409);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Trend/spikes/cardio";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(139, 382);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(22, 13);
+            this.label18.TabIndex = 30;
+            this.label18.Text = "До";
+            // 
+            // cut_to_texbox
+            // 
+            this.cut_to_texbox.Location = new System.Drawing.Point(167, 378);
+            this.cut_to_texbox.Name = "cut_to_texbox";
+            this.cut_to_texbox.Size = new System.Drawing.Size(30, 20);
+            this.cut_to_texbox.TabIndex = 29;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(72, 382);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(20, 13);
+            this.label17.TabIndex = 28;
+            this.label17.Text = "От";
+            // 
+            // cut_from_textbox
+            // 
+            this.cut_from_textbox.Location = new System.Drawing.Point(101, 379);
+            this.cut_from_textbox.Name = "cut_from_textbox";
+            this.cut_from_textbox.Size = new System.Drawing.Size(30, 20);
+            this.cut_from_textbox.TabIndex = 27;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(94, 352);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(109, 13);
+            this.label12.TabIndex = 26;
+            this.label12.Text = "Обрезание графика";
+            // 
+            // cut_button
+            // 
+            this.cut_button.Location = new System.Drawing.Point(203, 377);
+            this.cut_button.Name = "cut_button";
+            this.cut_button.Size = new System.Drawing.Size(75, 23);
+            this.cut_button.TabIndex = 25;
+            this.cut_button.Text = "Обрезать запись";
+            this.cut_button.UseVisualStyleBackColor = true;
+            this.cut_button.Click += new System.EventHandler(this.cut_button_Click);
             // 
             // groupBox2
             // 
@@ -673,7 +730,7 @@
             this.groupBox2.Controls.Add(this.with_grph);
             this.groupBox2.Controls.Add(this.anti_noise_n);
             this.groupBox2.Controls.Add(this.anti_noise_n_text_box);
-            this.groupBox2.Location = new System.Drawing.Point(101, 222);
+            this.groupBox2.Location = new System.Drawing.Point(98, 275);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(215, 47);
             this.groupBox2.TabIndex = 20;
@@ -780,7 +837,7 @@
             // 
             // BadHeatButton
             // 
-            this.BadHeatButton.Location = new System.Drawing.Point(9, 269);
+            this.BadHeatButton.Location = new System.Drawing.Point(6, 322);
             this.BadHeatButton.Name = "BadHeatButton";
             this.BadHeatButton.Size = new System.Drawing.Size(83, 23);
             this.BadHeatButton.TabIndex = 24;
@@ -851,7 +908,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(9, 221);
+            this.label1.Location = new System.Drawing.Point(6, 274);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(83, 13);
             this.label1.TabIndex = 23;
@@ -899,7 +956,7 @@
             // 
             // CardioPlotter
             // 
-            this.CardioPlotter.Location = new System.Drawing.Point(6, 240);
+            this.CardioPlotter.Location = new System.Drawing.Point(3, 293);
             this.CardioPlotter.Name = "CardioPlotter";
             this.CardioPlotter.Size = new System.Drawing.Size(75, 23);
             this.CardioPlotter.TabIndex = 16;
@@ -956,7 +1013,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(356, 346);
+            this.tabPage3.Size = new System.Drawing.Size(356, 353);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Potter";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -1281,7 +1338,7 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(356, 346);
+            this.tabPage4.Size = new System.Drawing.Size(356, 353);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Wav";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -1346,7 +1403,7 @@
             this.tabPage5.Location = new System.Drawing.Point(4, 22);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(356, 346);
+            this.tabPage5.Size = new System.Drawing.Size(356, 353);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Coursework";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -1436,56 +1493,44 @@
             this.label9.TabIndex = 27;
             this.label9.Text = "Rate to DT";
             // 
-            // cut_button
+            // groupBox8
             // 
-            this.cut_button.Location = new System.Drawing.Point(206, 324);
-            this.cut_button.Name = "cut_button";
-            this.cut_button.Size = new System.Drawing.Size(75, 23);
-            this.cut_button.TabIndex = 25;
-            this.cut_button.Text = "Обрезать запись";
-            this.cut_button.UseVisualStyleBackColor = true;
-            this.cut_button.Click += new System.EventHandler(this.cut_button_Click);
+            this.groupBox8.Controls.Add(this.Trend_Button);
+            this.groupBox8.Controls.Add(this.label19);
+            this.groupBox8.Controls.Add(this.Trend_WindowSize);
+            this.groupBox8.Location = new System.Drawing.Point(6, 218);
+            this.groupBox8.Name = "groupBox8";
+            this.groupBox8.Size = new System.Drawing.Size(222, 51);
+            this.groupBox8.TabIndex = 20;
+            this.groupBox8.TabStop = false;
+            this.groupBox8.Text = "Выделить тренд";
             // 
-            // label12
+            // Trend_Button
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(97, 299);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(109, 13);
-            this.label12.TabIndex = 26;
-            this.label12.Text = "Обрезание графика";
+            this.Trend_Button.Location = new System.Drawing.Point(134, 17);
+            this.Trend_Button.Name = "Trend_Button";
+            this.Trend_Button.Size = new System.Drawing.Size(75, 23);
+            this.Trend_Button.TabIndex = 15;
+            this.Trend_Button.Text = "Выполнить";
+            this.Trend_Button.UseVisualStyleBackColor = true;
+            this.Trend_Button.Click += new System.EventHandler(this.Trend_Button_Click);
             // 
-            // cut_from_textbox
+            // label19
             // 
-            this.cut_from_textbox.Location = new System.Drawing.Point(104, 326);
-            this.cut_from_textbox.Name = "cut_from_textbox";
-            this.cut_from_textbox.Size = new System.Drawing.Size(30, 20);
-            this.cut_from_textbox.TabIndex = 27;
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(6, 22);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(36, 13);
+            this.label19.TabIndex = 11;
+            this.label19.Text = "Wsize";
             // 
-            // label17
+            // Trend_WindowSize
             // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(75, 329);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(20, 13);
-            this.label17.TabIndex = 28;
-            this.label17.Text = "От";
-            // 
-            // cut_to_texbox
-            // 
-            this.cut_to_texbox.Location = new System.Drawing.Point(170, 325);
-            this.cut_to_texbox.Name = "cut_to_texbox";
-            this.cut_to_texbox.Size = new System.Drawing.Size(30, 20);
-            this.cut_to_texbox.TabIndex = 29;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(142, 329);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(22, 13);
-            this.label18.TabIndex = 30;
-            this.label18.Text = "До";
+            this.Trend_WindowSize.Location = new System.Drawing.Point(46, 19);
+            this.Trend_WindowSize.Name = "Trend_WindowSize";
+            this.Trend_WindowSize.Size = new System.Drawing.Size(82, 20);
+            this.Trend_WindowSize.TabIndex = 12;
+            this.Trend_WindowSize.Text = "30";
             // 
             // GraphForm
             // 
@@ -1553,6 +1598,8 @@
             this.groupBox7.PerformLayout();
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
+            this.groupBox8.ResumeLayout(false);
+            this.groupBox8.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1687,6 +1734,10 @@
         private System.Windows.Forms.TextBox cut_to_texbox;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.TextBox cut_from_textbox;
+        private System.Windows.Forms.GroupBox groupBox8;
+        private System.Windows.Forms.Button Trend_Button;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.TextBox Trend_WindowSize;
     }
 }
 

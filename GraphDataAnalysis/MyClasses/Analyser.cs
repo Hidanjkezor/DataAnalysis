@@ -542,6 +542,47 @@ namespace GraphDataAnalysis.MyClasses
             }
             return lpw1;
         }
- 
+
+        public static PointPairList SumGraphs(PointPairList ppl1, PointPairList ppl2)
+        {
+            var ppl = new PointPairList();
+            var pointer1 = 0;
+            var pointer2 = 0;
+
+            while (pointer1 != ppl1.Count && pointer2 != ppl2.Count)
+            {
+                if (ppl1[pointer1].X == ppl2[pointer2].X)
+                {
+                    ppl.Add(ppl1[pointer1].X, ppl1[pointer1].Y + ppl2[pointer2].Y);
+                    pointer1++;
+                    pointer2++;
+                }
+                else if (ppl1[pointer1].X < ppl2[pointer2].X)
+                {
+                    ppl.Add(ppl1[pointer1].X, ppl1[pointer1].Y);
+                    pointer1++;
+                }
+                else
+                {
+                    ppl.Add(ppl2[pointer2].X, ppl1[pointer2].Y);
+                    pointer2++;
+                }
+            }
+
+            while (pointer1 != ppl1.Count)
+            {
+                ppl.Add(ppl1[pointer1].X, ppl1[pointer1].Y);
+                pointer1++;
+            }
+
+            while (pointer2 != ppl2.Count)
+            {
+                ppl.Add(ppl2[pointer2].X, ppl2[pointer2].Y);
+                pointer2++;
+            }
+
+            return ppl;
+        }
+
     }
 }
