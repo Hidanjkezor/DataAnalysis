@@ -73,6 +73,10 @@
             this.dataFilePath_textBox = new System.Windows.Forms.TextBox();
             this.Open_File_button = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.Trend_Button = new System.Windows.Forms.Button();
+            this.label19 = new System.Windows.Forms.Label();
+            this.Trend_WindowSize = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
             this.cut_to_texbox = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
@@ -156,10 +160,18 @@
             this.Rate_to_dt_textBox = new System.Windows.Forms.TextBox();
             this.convert_rateDT_button = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
-            this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.Trend_Button = new System.Windows.Forms.Button();
-            this.label19 = new System.Windows.Forms.Label();
-            this.Trend_WindowSize = new System.Windows.Forms.TextBox();
+            this.tabControl2 = new System.Windows.Forms.TabControl();
+            this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.Apply_button = new System.Windows.Forms.Button();
+            this.zoom_mult = new System.Windows.Forms.NumericUpDown();
+            this.Zoom_box = new System.Windows.Forms.CheckBox();
+            this.BoxMethSelection = new System.Windows.Forms.ComboBox();
+            this.Save_button = new System.Windows.Forms.Button();
+            this.Open_Button = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.buttonRotate = new System.Windows.Forms.Button();
+            this.SubImageButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownGraphNo)).BeginInit();
             this.linearGroupBox.SuspendLayout();
             this.ExpGoupBox.SuspendLayout();
@@ -169,6 +181,7 @@
             this.tabPage1.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            this.groupBox8.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.AntiShiftGroupBox.SuspendLayout();
@@ -183,12 +196,16 @@
             this.tabPage4.SuspendLayout();
             this.groupBox7.SuspendLayout();
             this.tabPage5.SuspendLayout();
-            this.groupBox8.SuspendLayout();
+            this.tabControl2.SuspendLayout();
+            this.tabPage6.SuspendLayout();
+            this.tabPage7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.zoom_mult)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // zedGraphControl1
             // 
-            this.zedGraphControl1.Location = new System.Drawing.Point(12, 12);
+            this.zedGraphControl1.Location = new System.Drawing.Point(24, 6);
             this.zedGraphControl1.Name = "zedGraphControl1";
             this.zedGraphControl1.ScrollGrace = 0D;
             this.zedGraphControl1.ScrollMaxX = 0D;
@@ -203,7 +220,7 @@
             // 
             // zedGraphControl2
             // 
-            this.zedGraphControl2.Location = new System.Drawing.Point(434, 12);
+            this.zedGraphControl2.Location = new System.Drawing.Point(446, 6);
             this.zedGraphControl2.Name = "zedGraphControl2";
             this.zedGraphControl2.ScrollGrace = 0D;
             this.zedGraphControl2.ScrollMaxX = 0D;
@@ -218,7 +235,7 @@
             // 
             // zedGraphControl3
             // 
-            this.zedGraphControl3.Location = new System.Drawing.Point(12, 300);
+            this.zedGraphControl3.Location = new System.Drawing.Point(24, 294);
             this.zedGraphControl3.Name = "zedGraphControl3";
             this.zedGraphControl3.ScrollGrace = 0D;
             this.zedGraphControl3.ScrollMaxX = 0D;
@@ -233,7 +250,7 @@
             // 
             // numericUpDownGraphNo
             // 
-            this.numericUpDownGraphNo.Location = new System.Drawing.Point(907, 12);
+            this.numericUpDownGraphNo.Location = new System.Drawing.Point(919, 6);
             this.numericUpDownGraphNo.Maximum = new decimal(new int[] {
             4,
             0,
@@ -256,7 +273,7 @@
             // graphLabel
             // 
             this.graphLabel.AutoSize = true;
-            this.graphLabel.Location = new System.Drawing.Point(856, 14);
+            this.graphLabel.Location = new System.Drawing.Point(868, 8);
             this.graphLabel.Name = "graphLabel";
             this.graphLabel.Size = new System.Drawing.Size(45, 13);
             this.graphLabel.TabIndex = 5;
@@ -265,7 +282,7 @@
             // dtLabel
             // 
             this.dtLabel.AutoSize = true;
-            this.dtLabel.Location = new System.Drawing.Point(977, 41);
+            this.dtLabel.Location = new System.Drawing.Point(989, 35);
             this.dtLabel.Name = "dtLabel";
             this.dtLabel.Size = new System.Drawing.Size(16, 13);
             this.dtLabel.TabIndex = 6;
@@ -273,7 +290,7 @@
             // 
             // dtTextBox
             // 
-            this.dtTextBox.Location = new System.Drawing.Point(999, 38);
+            this.dtTextBox.Location = new System.Drawing.Point(1011, 32);
             this.dtTextBox.Name = "dtTextBox";
             this.dtTextBox.Size = new System.Drawing.Size(79, 20);
             this.dtTextBox.TabIndex = 7;
@@ -282,7 +299,7 @@
             // 
             // nTextBox
             // 
-            this.nTextBox.Location = new System.Drawing.Point(1105, 38);
+            this.nTextBox.Location = new System.Drawing.Point(1117, 32);
             this.nTextBox.Name = "nTextBox";
             this.nTextBox.Size = new System.Drawing.Size(79, 20);
             this.nTextBox.TabIndex = 9;
@@ -292,7 +309,7 @@
             // nLabel
             // 
             this.nLabel.AutoSize = true;
-            this.nLabel.Location = new System.Drawing.Point(1084, 41);
+            this.nLabel.Location = new System.Drawing.Point(1096, 35);
             this.nLabel.Name = "nLabel";
             this.nLabel.Size = new System.Drawing.Size(15, 13);
             this.nLabel.TabIndex = 8;
@@ -360,7 +377,7 @@
             // 
             // fromTextBox
             // 
-            this.fromTextBox.Location = new System.Drawing.Point(892, 38);
+            this.fromTextBox.Location = new System.Drawing.Point(904, 32);
             this.fromTextBox.Name = "fromTextBox";
             this.fromTextBox.Size = new System.Drawing.Size(79, 20);
             this.fromTextBox.TabIndex = 12;
@@ -370,7 +387,7 @@
             // fromLabel
             // 
             this.fromLabel.AutoSize = true;
-            this.fromLabel.Location = new System.Drawing.Point(856, 41);
+            this.fromLabel.Location = new System.Drawing.Point(868, 35);
             this.fromLabel.Name = "fromLabel";
             this.fromLabel.Size = new System.Drawing.Size(30, 13);
             this.fromLabel.TabIndex = 11;
@@ -549,7 +566,7 @@
             // 
             // clearButton
             // 
-            this.clearButton.Location = new System.Drawing.Point(1066, 9);
+            this.clearButton.Location = new System.Drawing.Point(1078, 3);
             this.clearButton.Name = "clearButton";
             this.clearButton.Size = new System.Drawing.Size(83, 23);
             this.clearButton.TabIndex = 18;
@@ -560,7 +577,7 @@
             // 
             // mergeButton
             // 
-            this.mergeButton.Location = new System.Drawing.Point(977, 9);
+            this.mergeButton.Location = new System.Drawing.Point(989, 3);
             this.mergeButton.Name = "mergeButton";
             this.mergeButton.Size = new System.Drawing.Size(83, 23);
             this.mergeButton.TabIndex = 19;
@@ -571,7 +588,7 @@
             // 
             // openAnalyserButton
             // 
-            this.openAnalyserButton.Location = new System.Drawing.Point(1118, 548);
+            this.openAnalyserButton.Location = new System.Drawing.Point(1130, 542);
             this.openAnalyserButton.Name = "openAnalyserButton";
             this.openAnalyserButton.Size = new System.Drawing.Size(116, 34);
             this.openAnalyserButton.TabIndex = 20;
@@ -586,7 +603,7 @@
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Controls.Add(this.tabPage5);
-            this.tabControl1.Location = new System.Drawing.Point(856, 107);
+            this.tabControl1.Location = new System.Drawing.Point(868, 101);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(364, 435);
@@ -604,7 +621,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(356, 353);
+            this.tabPage1.Size = new System.Drawing.Size(356, 409);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Classic func _data";
             // 
@@ -672,6 +689,45 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Trend/spikes/cardio";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // groupBox8
+            // 
+            this.groupBox8.Controls.Add(this.Trend_Button);
+            this.groupBox8.Controls.Add(this.label19);
+            this.groupBox8.Controls.Add(this.Trend_WindowSize);
+            this.groupBox8.Location = new System.Drawing.Point(6, 218);
+            this.groupBox8.Name = "groupBox8";
+            this.groupBox8.Size = new System.Drawing.Size(222, 51);
+            this.groupBox8.TabIndex = 20;
+            this.groupBox8.TabStop = false;
+            this.groupBox8.Text = "Выделить тренд";
+            // 
+            // Trend_Button
+            // 
+            this.Trend_Button.Location = new System.Drawing.Point(134, 17);
+            this.Trend_Button.Name = "Trend_Button";
+            this.Trend_Button.Size = new System.Drawing.Size(75, 23);
+            this.Trend_Button.TabIndex = 15;
+            this.Trend_Button.Text = "Выполнить";
+            this.Trend_Button.UseVisualStyleBackColor = true;
+            this.Trend_Button.Click += new System.EventHandler(this.Trend_Button_Click);
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(6, 22);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(36, 13);
+            this.label19.TabIndex = 11;
+            this.label19.Text = "Wsize";
+            // 
+            // Trend_WindowSize
+            // 
+            this.Trend_WindowSize.Location = new System.Drawing.Point(46, 19);
+            this.Trend_WindowSize.Name = "Trend_WindowSize";
+            this.Trend_WindowSize.Size = new System.Drawing.Size(82, 20);
+            this.Trend_WindowSize.TabIndex = 12;
+            this.Trend_WindowSize.Text = "30";
             // 
             // label18
             // 
@@ -1013,7 +1069,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(356, 353);
+            this.tabPage3.Size = new System.Drawing.Size(356, 409);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Potter";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -1338,7 +1394,7 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(356, 353);
+            this.tabPage4.Size = new System.Drawing.Size(356, 409);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Wav";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -1403,7 +1459,7 @@
             this.tabPage5.Location = new System.Drawing.Point(4, 22);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(356, 353);
+            this.tabPage5.Size = new System.Drawing.Size(356, 409);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Coursework";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -1453,7 +1509,7 @@
             // 
             // zedGraphControl4
             // 
-            this.zedGraphControl4.Location = new System.Drawing.Point(434, 300);
+            this.zedGraphControl4.Location = new System.Drawing.Point(446, 294);
             this.zedGraphControl4.Name = "zedGraphControl4";
             this.zedGraphControl4.ScrollGrace = 0D;
             this.zedGraphControl4.ScrollMaxX = 0D;
@@ -1468,7 +1524,7 @@
             // 
             // Rate_to_dt_textBox
             // 
-            this.Rate_to_dt_textBox.Location = new System.Drawing.Point(876, 81);
+            this.Rate_to_dt_textBox.Location = new System.Drawing.Point(888, 75);
             this.Rate_to_dt_textBox.Name = "Rate_to_dt_textBox";
             this.Rate_to_dt_textBox.Size = new System.Drawing.Size(100, 20);
             this.Rate_to_dt_textBox.TabIndex = 5;
@@ -1476,7 +1532,7 @@
             // 
             // convert_rateDT_button
             // 
-            this.convert_rateDT_button.Location = new System.Drawing.Point(985, 79);
+            this.convert_rateDT_button.Location = new System.Drawing.Point(997, 73);
             this.convert_rateDT_button.Name = "convert_rateDT_button";
             this.convert_rateDT_button.Size = new System.Drawing.Size(101, 23);
             this.convert_rateDT_button.TabIndex = 26;
@@ -1487,75 +1543,187 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(876, 62);
+            this.label9.Location = new System.Drawing.Point(888, 56);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(60, 13);
             this.label9.TabIndex = 27;
             this.label9.Text = "Rate to DT";
             // 
-            // groupBox8
+            // tabControl2
             // 
-            this.groupBox8.Controls.Add(this.Trend_Button);
-            this.groupBox8.Controls.Add(this.label19);
-            this.groupBox8.Controls.Add(this.Trend_WindowSize);
-            this.groupBox8.Location = new System.Drawing.Point(6, 218);
-            this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(222, 51);
-            this.groupBox8.TabIndex = 20;
-            this.groupBox8.TabStop = false;
-            this.groupBox8.Text = "Выделить тренд";
+            this.tabControl2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tabControl2.Controls.Add(this.tabPage6);
+            this.tabControl2.Controls.Add(this.tabPage7);
+            this.tabControl2.Location = new System.Drawing.Point(2, 1);
+            this.tabControl2.Name = "tabControl2";
+            this.tabControl2.SelectedIndex = 0;
+            this.tabControl2.Size = new System.Drawing.Size(1278, 621);
+            this.tabControl2.TabIndex = 28;
             // 
-            // Trend_Button
+            // tabPage6
             // 
-            this.Trend_Button.Location = new System.Drawing.Point(134, 17);
-            this.Trend_Button.Name = "Trend_Button";
-            this.Trend_Button.Size = new System.Drawing.Size(75, 23);
-            this.Trend_Button.TabIndex = 15;
-            this.Trend_Button.Text = "Выполнить";
-            this.Trend_Button.UseVisualStyleBackColor = true;
-            this.Trend_Button.Click += new System.EventHandler(this.Trend_Button_Click);
+            this.tabPage6.Controls.Add(this.zedGraphControl1);
+            this.tabPage6.Controls.Add(this.label9);
+            this.tabPage6.Controls.Add(this.zedGraphControl2);
+            this.tabPage6.Controls.Add(this.convert_rateDT_button);
+            this.tabPage6.Controls.Add(this.zedGraphControl3);
+            this.tabPage6.Controls.Add(this.Rate_to_dt_textBox);
+            this.tabPage6.Controls.Add(this.zedGraphControl4);
+            this.tabPage6.Controls.Add(this.tabControl1);
+            this.tabPage6.Controls.Add(this.numericUpDownGraphNo);
+            this.tabPage6.Controls.Add(this.openAnalyserButton);
+            this.tabPage6.Controls.Add(this.graphLabel);
+            this.tabPage6.Controls.Add(this.mergeButton);
+            this.tabPage6.Controls.Add(this.dtLabel);
+            this.tabPage6.Controls.Add(this.clearButton);
+            this.tabPage6.Controls.Add(this.dtTextBox);
+            this.tabPage6.Controls.Add(this.fromTextBox);
+            this.tabPage6.Controls.Add(this.nLabel);
+            this.tabPage6.Controls.Add(this.fromLabel);
+            this.tabPage6.Controls.Add(this.nTextBox);
+            this.tabPage6.Location = new System.Drawing.Point(4, 22);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage6.Size = new System.Drawing.Size(1270, 595);
+            this.tabPage6.TabIndex = 0;
+            this.tabPage6.Text = "First_semestr";
+            this.tabPage6.UseVisualStyleBackColor = true;
             // 
-            // label19
+            // tabPage7
             // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(6, 22);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(36, 13);
-            this.label19.TabIndex = 11;
-            this.label19.Text = "Wsize";
+            this.tabPage7.Controls.Add(this.SubImageButton);
+            this.tabPage7.Controls.Add(this.buttonRotate);
+            this.tabPage7.Controls.Add(this.Apply_button);
+            this.tabPage7.Controls.Add(this.zoom_mult);
+            this.tabPage7.Controls.Add(this.Zoom_box);
+            this.tabPage7.Controls.Add(this.BoxMethSelection);
+            this.tabPage7.Controls.Add(this.Save_button);
+            this.tabPage7.Controls.Add(this.Open_Button);
+            this.tabPage7.Controls.Add(this.pictureBox1);
+            this.tabPage7.Location = new System.Drawing.Point(4, 22);
+            this.tabPage7.Name = "tabPage7";
+            this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage7.Size = new System.Drawing.Size(1270, 595);
+            this.tabPage7.TabIndex = 1;
+            this.tabPage7.Text = "Second_semestr";
+            this.tabPage7.UseVisualStyleBackColor = true;
             // 
-            // Trend_WindowSize
+            // Apply_button
             // 
-            this.Trend_WindowSize.Location = new System.Drawing.Point(46, 19);
-            this.Trend_WindowSize.Name = "Trend_WindowSize";
-            this.Trend_WindowSize.Size = new System.Drawing.Size(82, 20);
-            this.Trend_WindowSize.TabIndex = 12;
-            this.Trend_WindowSize.Text = "30";
+            this.Apply_button.Location = new System.Drawing.Point(1151, 276);
+            this.Apply_button.Name = "Apply_button";
+            this.Apply_button.Size = new System.Drawing.Size(75, 23);
+            this.Apply_button.TabIndex = 6;
+            this.Apply_button.Text = "Apply";
+            this.Apply_button.UseVisualStyleBackColor = true;
+            this.Apply_button.Click += new System.EventHandler(this.Apply_button_Click);
+            // 
+            // zoom_mult
+            // 
+            this.zoom_mult.DecimalPlaces = 3;
+            this.zoom_mult.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            196608});
+            this.zoom_mult.Location = new System.Drawing.Point(1137, 168);
+            this.zoom_mult.Maximum = new decimal(new int[] {
+            100000000,
+            0,
+            0,
+            0});
+            this.zoom_mult.Minimum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            -2147483648});
+            this.zoom_mult.Name = "zoom_mult";
+            this.zoom_mult.Size = new System.Drawing.Size(120, 20);
+            this.zoom_mult.TabIndex = 5;
+            // 
+            // Zoom_box
+            // 
+            this.Zoom_box.AutoSize = true;
+            this.Zoom_box.Location = new System.Drawing.Point(1137, 243);
+            this.Zoom_box.Name = "Zoom_box";
+            this.Zoom_box.Size = new System.Drawing.Size(62, 17);
+            this.Zoom_box.TabIndex = 4;
+            this.Zoom_box.Text = "Zoom +";
+            this.Zoom_box.UseVisualStyleBackColor = true;
+            // 
+            // BoxMethSelection
+            // 
+            this.BoxMethSelection.FormattingEnabled = true;
+            this.BoxMethSelection.Items.AddRange(new object[] {
+            "Bilinear interpolation",
+            "Nearest neighbour"});
+            this.BoxMethSelection.Location = new System.Drawing.Point(1137, 203);
+            this.BoxMethSelection.Name = "BoxMethSelection";
+            this.BoxMethSelection.Size = new System.Drawing.Size(121, 21);
+            this.BoxMethSelection.TabIndex = 3;
+            this.BoxMethSelection.Text = "Bilinear interpolation";
+            // 
+            // Save_button
+            // 
+            this.Save_button.Location = new System.Drawing.Point(1151, 97);
+            this.Save_button.Name = "Save_button";
+            this.Save_button.Size = new System.Drawing.Size(75, 23);
+            this.Save_button.TabIndex = 2;
+            this.Save_button.Text = "Save";
+            this.Save_button.UseVisualStyleBackColor = true;
+            this.Save_button.Click += new System.EventHandler(this.Save_button_Click);
+            // 
+            // Open_Button
+            // 
+            this.Open_Button.Location = new System.Drawing.Point(1151, 32);
+            this.Open_Button.Name = "Open_Button";
+            this.Open_Button.Size = new System.Drawing.Size(75, 23);
+            this.Open_Button.TabIndex = 1;
+            this.Open_Button.Text = "Open";
+            this.Open_Button.UseVisualStyleBackColor = true;
+            this.Open_Button.Click += new System.EventHandler(this.Open_Button_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.BackColor = System.Drawing.Color.Gray;
+            this.pictureBox1.Location = new System.Drawing.Point(6, 6);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1125, 583);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBox1_Paint);
+            // 
+            // buttonRotate
+            // 
+            this.buttonRotate.Location = new System.Drawing.Point(1151, 359);
+            this.buttonRotate.Name = "buttonRotate";
+            this.buttonRotate.Size = new System.Drawing.Size(75, 23);
+            this.buttonRotate.TabIndex = 7;
+            this.buttonRotate.Text = "->";
+            this.buttonRotate.UseVisualStyleBackColor = true;
+            this.buttonRotate.Click += new System.EventHandler(this.buttonRotate_Click);
+            // 
+            // SubImageButton
+            // 
+            this.SubImageButton.Location = new System.Drawing.Point(1151, 452);
+            this.SubImageButton.Name = "SubImageButton";
+            this.SubImageButton.Size = new System.Drawing.Size(75, 23);
+            this.SubImageButton.TabIndex = 8;
+            this.SubImageButton.Text = "Subtract Image";
+            this.SubImageButton.UseVisualStyleBackColor = true;
+            this.SubImageButton.Click += new System.EventHandler(this.SubImageButton_Click);
             // 
             // GraphForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1245, 592);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.convert_rateDT_button);
-            this.Controls.Add(this.Rate_to_dt_textBox);
-            this.Controls.Add(this.tabControl1);
-            this.Controls.Add(this.openAnalyserButton);
-            this.Controls.Add(this.mergeButton);
-            this.Controls.Add(this.clearButton);
-            this.Controls.Add(this.fromTextBox);
-            this.Controls.Add(this.fromLabel);
-            this.Controls.Add(this.nTextBox);
-            this.Controls.Add(this.nLabel);
-            this.Controls.Add(this.dtTextBox);
-            this.Controls.Add(this.dtLabel);
-            this.Controls.Add(this.graphLabel);
-            this.Controls.Add(this.numericUpDownGraphNo);
-            this.Controls.Add(this.zedGraphControl4);
-            this.Controls.Add(this.zedGraphControl3);
-            this.Controls.Add(this.zedGraphControl2);
-            this.Controls.Add(this.zedGraphControl1);
+            this.ClientSize = new System.Drawing.Size(1278, 624);
+            this.Controls.Add(this.tabControl2);
             this.Name = "GraphForm";
             this.Text = "Графики";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownGraphNo)).EndInit();
@@ -1573,6 +1741,8 @@
             this.groupBox6.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            this.groupBox8.ResumeLayout(false);
+            this.groupBox8.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -1598,10 +1768,14 @@
             this.groupBox7.PerformLayout();
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
-            this.groupBox8.ResumeLayout(false);
-            this.groupBox8.PerformLayout();
+            this.tabControl2.ResumeLayout(false);
+            this.tabPage6.ResumeLayout(false);
+            this.tabPage6.PerformLayout();
+            this.tabPage7.ResumeLayout(false);
+            this.tabPage7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.zoom_mult)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -1738,6 +1912,18 @@
         private System.Windows.Forms.Button Trend_Button;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.TextBox Trend_WindowSize;
+        private System.Windows.Forms.TabControl tabControl2;
+        private System.Windows.Forms.TabPage tabPage6;
+        private System.Windows.Forms.TabPage tabPage7;
+        private System.Windows.Forms.Button Save_button;
+        private System.Windows.Forms.Button Open_Button;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.NumericUpDown zoom_mult;
+        private System.Windows.Forms.CheckBox Zoom_box;
+        private System.Windows.Forms.ComboBox BoxMethSelection;
+        private System.Windows.Forms.Button Apply_button;
+        private System.Windows.Forms.Button buttonRotate;
+        private System.Windows.Forms.Button SubImageButton;
     }
 }
 

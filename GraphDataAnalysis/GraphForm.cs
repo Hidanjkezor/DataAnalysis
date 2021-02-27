@@ -2,6 +2,7 @@
 using System.CodeDom;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.IO;
 using System.Windows.Forms;
 using GraphDataAnalysis.MyClasses;
@@ -11,7 +12,8 @@ namespace GraphDataAnalysis
     public partial class GraphForm : Form
     {
         private readonly List<ZedGraphControl> _controlZgcList;
-
+        public ManipulateImages Data = new ManipulateImages();
+        public Image CurImage;
         public GraphForm()
         {
             InitializeComponent();
@@ -579,6 +581,126 @@ namespace GraphDataAnalysis
 
             _controlZgcList[(int)numericUpDownGraphNo.Value - 1].RestoreScale(_controlZgcList[(int)numericUpDownGraphNo.Value - 1].GraphPane);
             _controlZgcList[(int)numericUpDownGraphNo.Value - 1].Invalidate();
+        }
+
+        private void Open_Button_Click(object sender, EventArgs e)
+        {
+            using (var openFileDialog = new OpenFileDialog())
+            {
+
+                openFileDialog.InitialDirectory = "c:\\";
+                openFileDialog.Filter = "Image files (*.bmp;*.JPG;*.xcr)|*.BMP;*.JPG;*.xcr|All files (*.*)|*.*";
+                openFileDialog.FilterIndex = 1;
+                openFileDialog.RestoreDirectory = true;
+
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    if (openFileDialog.FileName.EndsWith("xcr"))
+                    {
+                        Data.LoadXcr(openFileDialog.FileName);
+                    }
+                    else
+                    {
+                        Data.LoadImage(openFileDialog.FileName);
+                    }
+                    CurImage = Data.GetBitmap();
+                    pictureBox1.Invalidate();
+                }
+            }
+        }
+
+        private void pictureBox1_Paint(object sender, PaintEventArgs e)
+        {
+            if (CurImage == null)
+            {
+                return;
+            }
+
+            e.Graphics.InterpolationMode = InterpolationMode.NearestNeighbor;   // if inc picture size
+            e.Graphics.PixelOffsetMode = PixelOffsetMode.Half;  //  for fix pixels
+            var r = new RectangleF(0,0,CurImage.Width, CurImage.Height);
+            e.Graphics.DrawImage(CurImage, r);
+        }
+
+        private void Save_button_Click(object sender, EventArgs e)
+        {
+            using (var saveFileDialog = new SaveFileDialog())
+            {
+
+                saveFileDialog.InitialDirectory = "c:\\";
+                saveFileDialog.Filter = "Image files (*.JPG)|.JPG|All files (*.*)|*.*";
+                saveFileDialog.FilterIndex = 1;
+                saveFileDialog.RestoreDirectory = true;
+
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                  CurImage.Save(saveFileDialog.FileName);
+                }
+            }
+        }
+
+        private void Apply_button_Click(object sender, EventArgs e)
+        {
+            var meth = BoxMethSelection.Text;
+            var mulfactor = (double)zoom_mult.Value;
+            if (!Zoom_box.Checked)
+            {
+                mulfactor = 1 / mulfactor;
+            }
+            switch (meth)
+            {
+                case "Nearest neighbour":
+                    Data.NearestNeighbour(mulfactor);
+                    break;
+                case "Bilinear interpolation":
+                    Data.Bilinear(mulfactor);
+                    break;
+
+            }
+            CurImage = Data.GetBitmap();
+            pictureBox1.Invalidate();
+        }
+
+        private void buttonRotate_Click(object sender, EventArgs e)
+        {
+            Data.RotateImage();
+            CurImage = Data.GetBitmap();
+            pictureBox1.Invalidate();
+        }
+
+        private void SubImageButton_Click(object sender, EventArgs e)
+        {
+            using (var openFileDialog = new OpenFileDialog())
+            {
+
+                openFileDialog.InitialDirectory = "c:\\";
+                openFileDialog.Filter = "Image files (*.bmp;*.JPG;*.xcr)|*.BMP;*.JPG;*.xcr|All files (*.*)|*.*";
+                openFileDialog.FilterIndex = 1;
+                openFileDialog.RestoreDirectory = true;
+
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    var Data2 = new ManipulateImages();
+                    if (openFileDialog.FileName.EndsWith("xcr"))
+                    {
+                        Data2.LoadXcr(openFileDialog.FileName);
+                    }
+                    else
+                    {
+                        Data2.LoadImage(openFileDialog.FileName);
+                    }
+
+                    for (var i = 0; i< Data.Data.Count;i++)
+                    {
+                        for (var j = 0; j< Data.Data[0].Count;j++)
+                        {
+                            Data.Data[i][j].Y -= Data2.Data[i][j].Y;
+                        }
+                    }
+                    CurImage = Data.GetBitmap();
+                    pictureBox1.Invalidate();
+                }
+            }
         }
     }
 }
