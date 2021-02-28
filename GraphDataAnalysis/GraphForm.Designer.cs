@@ -163,6 +163,8 @@
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.SubImageButton = new System.Windows.Forms.Button();
+            this.buttonRotate = new System.Windows.Forms.Button();
             this.Apply_button = new System.Windows.Forms.Button();
             this.zoom_mult = new System.Windows.Forms.NumericUpDown();
             this.Zoom_box = new System.Windows.Forms.CheckBox();
@@ -170,8 +172,11 @@
             this.Save_button = new System.Windows.Forms.Button();
             this.Open_Button = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.buttonRotate = new System.Windows.Forms.Button();
-            this.SubImageButton = new System.Windows.Forms.Button();
+            this.NegativeButton = new System.Windows.Forms.Button();
+            this.LogarithmButton = new System.Windows.Forms.Button();
+            this.InverseCheckBox = new System.Windows.Forms.CheckBox();
+            this.PowButton = new System.Windows.Forms.Button();
+            this.PowValueNumeric = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownGraphNo)).BeginInit();
             this.linearGroupBox.SuspendLayout();
             this.ExpGoupBox.SuspendLayout();
@@ -201,6 +206,7 @@
             this.tabPage7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.zoom_mult)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PowValueNumeric)).BeginInit();
             this.SuspendLayout();
             // 
             // zedGraphControl1
@@ -1593,6 +1599,11 @@
             // 
             // tabPage7
             // 
+            this.tabPage7.Controls.Add(this.PowValueNumeric);
+            this.tabPage7.Controls.Add(this.PowButton);
+            this.tabPage7.Controls.Add(this.InverseCheckBox);
+            this.tabPage7.Controls.Add(this.LogarithmButton);
+            this.tabPage7.Controls.Add(this.NegativeButton);
             this.tabPage7.Controls.Add(this.SubImageButton);
             this.tabPage7.Controls.Add(this.buttonRotate);
             this.tabPage7.Controls.Add(this.Apply_button);
@@ -1610,9 +1621,29 @@
             this.tabPage7.Text = "Second_semestr";
             this.tabPage7.UseVisualStyleBackColor = true;
             // 
+            // SubImageButton
+            // 
+            this.SubImageButton.Location = new System.Drawing.Point(1155, 169);
+            this.SubImageButton.Name = "SubImageButton";
+            this.SubImageButton.Size = new System.Drawing.Size(75, 23);
+            this.SubImageButton.TabIndex = 8;
+            this.SubImageButton.Text = "Subtract Image";
+            this.SubImageButton.UseVisualStyleBackColor = true;
+            this.SubImageButton.Click += new System.EventHandler(this.SubImageButton_Click);
+            // 
+            // buttonRotate
+            // 
+            this.buttonRotate.Location = new System.Drawing.Point(1195, 140);
+            this.buttonRotate.Name = "buttonRotate";
+            this.buttonRotate.Size = new System.Drawing.Size(75, 23);
+            this.buttonRotate.TabIndex = 7;
+            this.buttonRotate.Text = "->";
+            this.buttonRotate.UseVisualStyleBackColor = true;
+            this.buttonRotate.Click += new System.EventHandler(this.buttonRotate_Click);
+            // 
             // Apply_button
             // 
-            this.Apply_button.Location = new System.Drawing.Point(1151, 276);
+            this.Apply_button.Location = new System.Drawing.Point(1111, 140);
             this.Apply_button.Name = "Apply_button";
             this.Apply_button.Size = new System.Drawing.Size(75, 23);
             this.Apply_button.TabIndex = 6;
@@ -1628,7 +1659,7 @@
             0,
             0,
             196608});
-            this.zoom_mult.Location = new System.Drawing.Point(1137, 168);
+            this.zoom_mult.Location = new System.Drawing.Point(1121, 64);
             this.zoom_mult.Maximum = new decimal(new int[] {
             100000000,
             0,
@@ -1646,7 +1677,7 @@
             // Zoom_box
             // 
             this.Zoom_box.AutoSize = true;
-            this.Zoom_box.Location = new System.Drawing.Point(1137, 243);
+            this.Zoom_box.Location = new System.Drawing.Point(1120, 117);
             this.Zoom_box.Name = "Zoom_box";
             this.Zoom_box.Size = new System.Drawing.Size(62, 17);
             this.Zoom_box.TabIndex = 4;
@@ -1659,7 +1690,7 @@
             this.BoxMethSelection.Items.AddRange(new object[] {
             "Bilinear interpolation",
             "Nearest neighbour"});
-            this.BoxMethSelection.Location = new System.Drawing.Point(1137, 203);
+            this.BoxMethSelection.Location = new System.Drawing.Point(1120, 90);
             this.BoxMethSelection.Name = "BoxMethSelection";
             this.BoxMethSelection.Size = new System.Drawing.Size(121, 21);
             this.BoxMethSelection.TabIndex = 3;
@@ -1667,7 +1698,7 @@
             // 
             // Save_button
             // 
-            this.Save_button.Location = new System.Drawing.Point(1151, 97);
+            this.Save_button.Location = new System.Drawing.Point(1137, 35);
             this.Save_button.Name = "Save_button";
             this.Save_button.Size = new System.Drawing.Size(75, 23);
             this.Save_button.TabIndex = 2;
@@ -1677,7 +1708,7 @@
             // 
             // Open_Button
             // 
-            this.Open_Button.Location = new System.Drawing.Point(1151, 32);
+            this.Open_Button.Location = new System.Drawing.Point(1137, 6);
             this.Open_Button.Name = "Open_Button";
             this.Open_Button.Size = new System.Drawing.Size(75, 23);
             this.Open_Button.TabIndex = 1;
@@ -1693,30 +1724,68 @@
             this.pictureBox1.BackColor = System.Drawing.Color.Gray;
             this.pictureBox1.Location = new System.Drawing.Point(6, 6);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1125, 583);
+            this.pictureBox1.Size = new System.Drawing.Size(1099, 591);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBox1_Paint);
             // 
-            // buttonRotate
+            // NegativeButton
             // 
-            this.buttonRotate.Location = new System.Drawing.Point(1151, 359);
-            this.buttonRotate.Name = "buttonRotate";
-            this.buttonRotate.Size = new System.Drawing.Size(75, 23);
-            this.buttonRotate.TabIndex = 7;
-            this.buttonRotate.Text = "->";
-            this.buttonRotate.UseVisualStyleBackColor = true;
-            this.buttonRotate.Click += new System.EventHandler(this.buttonRotate_Click);
+            this.NegativeButton.Location = new System.Drawing.Point(1112, 218);
+            this.NegativeButton.Name = "NegativeButton";
+            this.NegativeButton.Size = new System.Drawing.Size(75, 23);
+            this.NegativeButton.TabIndex = 9;
+            this.NegativeButton.Text = "Negative";
+            this.NegativeButton.UseVisualStyleBackColor = true;
+            this.NegativeButton.Click += new System.EventHandler(this.NegativeButton_Click);
             // 
-            // SubImageButton
+            // LogarithmButton
             // 
-            this.SubImageButton.Location = new System.Drawing.Point(1151, 452);
-            this.SubImageButton.Name = "SubImageButton";
-            this.SubImageButton.Size = new System.Drawing.Size(75, 23);
-            this.SubImageButton.TabIndex = 8;
-            this.SubImageButton.Text = "Subtract Image";
-            this.SubImageButton.UseVisualStyleBackColor = true;
-            this.SubImageButton.Click += new System.EventHandler(this.SubImageButton_Click);
+            this.LogarithmButton.Location = new System.Drawing.Point(1112, 256);
+            this.LogarithmButton.Name = "LogarithmButton";
+            this.LogarithmButton.Size = new System.Drawing.Size(75, 23);
+            this.LogarithmButton.TabIndex = 10;
+            this.LogarithmButton.Text = "Logarithm";
+            this.LogarithmButton.UseVisualStyleBackColor = true;
+            this.LogarithmButton.Click += new System.EventHandler(this.LogarithmButton_Click);
+            // 
+            // InverseCheckBox
+            // 
+            this.InverseCheckBox.AutoSize = true;
+            this.InverseCheckBox.Location = new System.Drawing.Point(1195, 260);
+            this.InverseCheckBox.Name = "InverseCheckBox";
+            this.InverseCheckBox.Size = new System.Drawing.Size(61, 17);
+            this.InverseCheckBox.TabIndex = 11;
+            this.InverseCheckBox.Text = "Inverse";
+            this.InverseCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // PowButton
+            // 
+            this.PowButton.Location = new System.Drawing.Point(1112, 301);
+            this.PowButton.Name = "PowButton";
+            this.PowButton.Size = new System.Drawing.Size(75, 23);
+            this.PowButton.TabIndex = 12;
+            this.PowButton.Text = "Pow";
+            this.PowButton.UseVisualStyleBackColor = true;
+            this.PowButton.Click += new System.EventHandler(this.PowButton_Click);
+            // 
+            // PowValueNumeric
+            // 
+            this.PowValueNumeric.DecimalPlaces = 3;
+            this.PowValueNumeric.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            196608});
+            this.PowValueNumeric.Location = new System.Drawing.Point(1195, 303);
+            this.PowValueNumeric.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
+            this.PowValueNumeric.Name = "PowValueNumeric";
+            this.PowValueNumeric.Size = new System.Drawing.Size(61, 20);
+            this.PowValueNumeric.TabIndex = 13;
             // 
             // GraphForm
             // 
@@ -1775,6 +1844,7 @@
             this.tabPage7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.zoom_mult)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PowValueNumeric)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1924,6 +1994,11 @@
         private System.Windows.Forms.Button Apply_button;
         private System.Windows.Forms.Button buttonRotate;
         private System.Windows.Forms.Button SubImageButton;
+        private System.Windows.Forms.CheckBox InverseCheckBox;
+        private System.Windows.Forms.Button LogarithmButton;
+        private System.Windows.Forms.Button NegativeButton;
+        private System.Windows.Forms.NumericUpDown PowValueNumeric;
+        private System.Windows.Forms.Button PowButton;
     }
 }
 

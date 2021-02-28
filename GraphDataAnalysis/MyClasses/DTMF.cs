@@ -13,10 +13,10 @@ namespace GraphDataAnalysis.MyClasses
     {
    static     Dictionary<char, double> freq_1 = new Dictionary<char, double>()
         {
-            {'1', 697},
+            {'1',697},
             {'2',697},
-            {'3', 697},
-            {'A', 697},
+            {'3',697},
+            {'A',697},
             {'4',770},
             {'5',770},
             {'6',770},

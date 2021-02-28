@@ -225,5 +225,88 @@ namespace GraphDataAnalysis.MyClasses
 
             Data = newData;
         }
+
+        public double GetMin()
+        {
+            return Data.Min(row => row.Min(v => v.Y));
+        }
+
+        public double GetMax()
+        {
+            return Data.Max(row => row.Max(v => v.Y));
+        }
+        public void ApplyNegative()
+        {
+            var min = GetMin();
+            var max = GetMax() - min;
+
+            var height = Data.Count;
+            var width = Data[0].Count;
+
+            for (var i = 0; i < height; i++)
+            {
+                for (var j = 0; j < width; j++)
+                {
+                    Data[i][j].Y = max - (Data[i][j].Y - min) + min;
+                }
+            }
+        }
+        public void ApplyLogarithm()
+        {
+            var min = GetMin();
+            var max = GetMax();
+            var tmpMax = max - min;
+
+            var c = tmpMax / Math.Log(tmpMax + 1);
+
+            var height = Data.Count;
+            var width = Data[0].Count;
+
+            for (var i = 0; i < height; i++)
+            {
+                for (var j = 0; j < width; j++)
+                {
+                    Data[i][j].Y = c * Math.Log(Data[i][j].Y + 1 - min) + min;
+                }
+            }
+        }
+        public void ApplyInverseLogarithm()
+        {
+            var min = GetMin();
+            var max = GetMax();
+            var tmpMax = max - min;
+
+            var c = tmpMax / Math.Log(tmpMax + 1);
+
+            var height = Data.Count;
+            var width = Data[0].Count;
+
+            for (var i = 0; i < height; i++)
+            {
+                for (var j = 0; j < width; j++)
+                {
+                    Data[i][j].Y = Math.Exp((Data[i][j].Y - min) / c) - 1 + min;
+                }
+            }
+        }
+        public void ApplyPower(double power)
+        {
+            var min = GetMin();
+            var max = GetMax();
+            var tmpMax = max - min;
+
+            var c = tmpMax / Math.Pow(tmpMax, power);
+
+            var height = Data.Count;
+            var width = Data[0].Count;
+
+            for (var i = 0; i < height; i++)
+            {
+                for (var j = 0; j < width; j++)
+                {
+                    Data[i][j].Y = c * Math.Pow(Data[i][j].Y - min, power) + min;
+                }
+            }
+        }
     }
 }

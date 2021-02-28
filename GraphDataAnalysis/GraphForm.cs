@@ -702,5 +702,34 @@ namespace GraphDataAnalysis
                 }
             }
         }
+
+        private void NegativeButton_Click(object sender, EventArgs e)
+        {
+            Data.ApplyNegative();
+            CurImage = Data.GetBitmap();
+            pictureBox1.Invalidate();
+        }
+
+        private void LogarithmButton_Click(object sender, EventArgs e)
+        {
+            if (InverseCheckBox.Checked)
+            {
+                Data.ApplyInverseLogarithm();
+            }
+            else
+            {
+                Data.ApplyLogarithm();
+            }
+            CurImage = Data.GetBitmap();
+            pictureBox1.Invalidate();
+        }
+
+        private void PowButton_Click(object sender, EventArgs e)
+        {
+            var pow_value = PowValueNumeric.Value;
+            Data.ApplyPower((double)pow_value);
+            CurImage = Data.GetBitmap();
+            pictureBox1.Invalidate();
+        }
     }
 }
