@@ -308,5 +308,78 @@ namespace GraphDataAnalysis.MyClasses
                 }
             }
         }
+
+        public int[] GetHistogram()
+        {
+            var min = GetMin();
+            var max = GetMax();
+            var nBins = (int)max - (int)min + 1;
+            return GetHistogram(nBins, min);
+        }
+
+        public int[] GetHistogram(int preCalcNBins, double preCalcMin)
+        {
+            var hist = new int[preCalcNBins];
+            var width = Data[0].Count;
+            var height = Data.Count;
+
+            for (var i = 0; i < height; i++)
+            {
+                for (var j = 0; j < width; j++)
+                {
+                    hist[(int)(Data[i][j].Y - preCalcMin)]++;
+                }
+            }
+
+            return hist;
+        }
+ 
+        public void EqualizeHistogram()
+        {
+            var min = GetMin();
+            var max = GetMax();
+            var nBins = (int)max - (int)min + 1;
+            //if (min > 0 && max <= 255)
+            //    n_bins = 256;
+
+
+            var width = Data[0].Count;
+            var height = Data.Count;
+
+            var total = width * height;
+
+            var hist = GetHistogram(nBins, min);
+
+            var histPointer = 0;
+            while (hist[histPointer] == 0)
+                ++histPointer;
+
+            if (hist[histPointer] == total)
+            {
+                return;
+            }
+
+            var scale = (nBins - 1.0) / (total - hist[histPointer]);
+            var lut = new int[nBins];
+            histPointer++;
+
+            var sum = 0;
+            for (int i = 0; i < histPointer; i++)
+                lut[i] = (int)min;
+
+            for (; histPointer < hist.Length; histPointer++)
+            {
+                sum += hist[histPointer];
+                lut[histPointer] = (int)(Math.Max(0, Math.Min((int)Math.Round(sum * scale), max - min)) + min);
+            }
+
+            for (var i = 0; i < height; i++)
+            {
+                for (var j = 0; j < width; j++)
+                {
+                    Data[i][j].Y = lut[(int)(Data[i][j].Y - min)];
+                }
+            }
+        }
     }
 }

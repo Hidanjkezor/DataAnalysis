@@ -163,6 +163,16 @@
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.buttonGetHistogram_Click = new System.Windows.Forms.Button();
+            this.Grapgh = new System.Windows.Forms.Label();
+            this.GraphNumberNum = new System.Windows.Forms.NumericUpDown();
+            this.ColorDepthNum = new System.Windows.Forms.NumericUpDown();
+            this.EqualisationButton = new System.Windows.Forms.Button();
+            this.PowValueNumeric = new System.Windows.Forms.NumericUpDown();
+            this.PowButton = new System.Windows.Forms.Button();
+            this.InverseCheckBox = new System.Windows.Forms.CheckBox();
+            this.LogarithmButton = new System.Windows.Forms.Button();
+            this.NegativeButton = new System.Windows.Forms.Button();
             this.SubImageButton = new System.Windows.Forms.Button();
             this.buttonRotate = new System.Windows.Forms.Button();
             this.Apply_button = new System.Windows.Forms.Button();
@@ -172,11 +182,6 @@
             this.Save_button = new System.Windows.Forms.Button();
             this.Open_Button = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.NegativeButton = new System.Windows.Forms.Button();
-            this.LogarithmButton = new System.Windows.Forms.Button();
-            this.InverseCheckBox = new System.Windows.Forms.CheckBox();
-            this.PowButton = new System.Windows.Forms.Button();
-            this.PowValueNumeric = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownGraphNo)).BeginInit();
             this.linearGroupBox.SuspendLayout();
             this.ExpGoupBox.SuspendLayout();
@@ -204,9 +209,11 @@
             this.tabControl2.SuspendLayout();
             this.tabPage6.SuspendLayout();
             this.tabPage7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.GraphNumberNum)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ColorDepthNum)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PowValueNumeric)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.zoom_mult)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PowValueNumeric)).BeginInit();
             this.SuspendLayout();
             // 
             // zedGraphControl1
@@ -1565,7 +1572,7 @@
             this.tabControl2.Location = new System.Drawing.Point(2, 1);
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.Size = new System.Drawing.Size(1278, 621);
+            this.tabControl2.Size = new System.Drawing.Size(1282, 621);
             this.tabControl2.TabIndex = 28;
             // 
             // tabPage6
@@ -1592,13 +1599,18 @@
             this.tabPage6.Location = new System.Drawing.Point(4, 22);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(1270, 595);
+            this.tabPage6.Size = new System.Drawing.Size(1274, 595);
             this.tabPage6.TabIndex = 0;
             this.tabPage6.Text = "First_semestr";
             this.tabPage6.UseVisualStyleBackColor = true;
             // 
             // tabPage7
             // 
+            this.tabPage7.Controls.Add(this.buttonGetHistogram_Click);
+            this.tabPage7.Controls.Add(this.Grapgh);
+            this.tabPage7.Controls.Add(this.GraphNumberNum);
+            this.tabPage7.Controls.Add(this.ColorDepthNum);
+            this.tabPage7.Controls.Add(this.EqualisationButton);
             this.tabPage7.Controls.Add(this.PowValueNumeric);
             this.tabPage7.Controls.Add(this.PowButton);
             this.tabPage7.Controls.Add(this.InverseCheckBox);
@@ -1616,14 +1628,150 @@
             this.tabPage7.Location = new System.Drawing.Point(4, 22);
             this.tabPage7.Name = "tabPage7";
             this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage7.Size = new System.Drawing.Size(1270, 595);
+            this.tabPage7.Size = new System.Drawing.Size(1274, 595);
             this.tabPage7.TabIndex = 1;
             this.tabPage7.Text = "Second_semestr";
             this.tabPage7.UseVisualStyleBackColor = true;
             // 
+            // buttonGetHistogram_Click
+            // 
+            this.buttonGetHistogram_Click.Location = new System.Drawing.Point(1121, 530);
+            this.buttonGetHistogram_Click.Name = "buttonGetHistogram_Click";
+            this.buttonGetHistogram_Click.Size = new System.Drawing.Size(129, 23);
+            this.buttonGetHistogram_Click.TabIndex = 18;
+            this.buttonGetHistogram_Click.Text = "Histogram to graphic";
+            this.buttonGetHistogram_Click.UseVisualStyleBackColor = true;
+            this.buttonGetHistogram_Click.Click += new System.EventHandler(this.buttonGetHistogram_Click_Click);
+            // 
+            // Grapgh
+            // 
+            this.Grapgh.AutoSize = true;
+            this.Grapgh.Location = new System.Drawing.Point(1118, 467);
+            this.Grapgh.Name = "Grapgh";
+            this.Grapgh.Size = new System.Drawing.Size(94, 13);
+            this.Grapgh.TabIndex = 17;
+            this.Grapgh.Text = "Number of graphic";
+            // 
+            // GraphNumberNum
+            // 
+            this.GraphNumberNum.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.GraphNumberNum.Location = new System.Drawing.Point(1121, 483);
+            this.GraphNumberNum.Maximum = new decimal(new int[] {
+            4,
+            0,
+            0,
+            0});
+            this.GraphNumberNum.Name = "GraphNumberNum";
+            this.GraphNumberNum.Size = new System.Drawing.Size(120, 20);
+            this.GraphNumberNum.TabIndex = 16;
+            this.GraphNumberNum.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // ColorDepthNum
+            // 
+            this.ColorDepthNum.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.ColorDepthNum.Location = new System.Drawing.Point(1117, 78);
+            this.ColorDepthNum.Maximum = new decimal(new int[] {
+            8,
+            0,
+            0,
+            0});
+            this.ColorDepthNum.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.ColorDepthNum.Name = "ColorDepthNum";
+            this.ColorDepthNum.Size = new System.Drawing.Size(120, 20);
+            this.ColorDepthNum.TabIndex = 15;
+            this.ColorDepthNum.Value = new decimal(new int[] {
+            8,
+            0,
+            0,
+            0});
+            this.ColorDepthNum.ValueChanged += new System.EventHandler(this.ColorDepthNum_ValueChanged);
+            // 
+            // EqualisationButton
+            // 
+            this.EqualisationButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.EqualisationButton.Location = new System.Drawing.Point(1151, 426);
+            this.EqualisationButton.Name = "EqualisationButton";
+            this.EqualisationButton.Size = new System.Drawing.Size(75, 23);
+            this.EqualisationButton.TabIndex = 14;
+            this.EqualisationButton.Text = "Equalisation";
+            this.EqualisationButton.UseVisualStyleBackColor = true;
+            this.EqualisationButton.Click += new System.EventHandler(this.EqualisationButton_Click);
+            // 
+            // PowValueNumeric
+            // 
+            this.PowValueNumeric.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.PowValueNumeric.DecimalPlaces = 3;
+            this.PowValueNumeric.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            196608});
+            this.PowValueNumeric.Location = new System.Drawing.Point(1204, 380);
+            this.PowValueNumeric.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
+            this.PowValueNumeric.Name = "PowValueNumeric";
+            this.PowValueNumeric.Size = new System.Drawing.Size(61, 20);
+            this.PowValueNumeric.TabIndex = 13;
+            // 
+            // PowButton
+            // 
+            this.PowButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.PowButton.Location = new System.Drawing.Point(1121, 378);
+            this.PowButton.Name = "PowButton";
+            this.PowButton.Size = new System.Drawing.Size(75, 23);
+            this.PowButton.TabIndex = 12;
+            this.PowButton.Text = "Pow";
+            this.PowButton.UseVisualStyleBackColor = true;
+            this.PowButton.Click += new System.EventHandler(this.PowButton_Click);
+            // 
+            // InverseCheckBox
+            // 
+            this.InverseCheckBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.InverseCheckBox.AutoSize = true;
+            this.InverseCheckBox.Location = new System.Drawing.Point(1204, 337);
+            this.InverseCheckBox.Name = "InverseCheckBox";
+            this.InverseCheckBox.Size = new System.Drawing.Size(61, 17);
+            this.InverseCheckBox.TabIndex = 11;
+            this.InverseCheckBox.Text = "Inverse";
+            this.InverseCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // LogarithmButton
+            // 
+            this.LogarithmButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.LogarithmButton.Location = new System.Drawing.Point(1121, 333);
+            this.LogarithmButton.Name = "LogarithmButton";
+            this.LogarithmButton.Size = new System.Drawing.Size(75, 23);
+            this.LogarithmButton.TabIndex = 10;
+            this.LogarithmButton.Text = "Logarithm";
+            this.LogarithmButton.UseVisualStyleBackColor = true;
+            this.LogarithmButton.Click += new System.EventHandler(this.LogarithmButton_Click);
+            // 
+            // NegativeButton
+            // 
+            this.NegativeButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.NegativeButton.Location = new System.Drawing.Point(1121, 295);
+            this.NegativeButton.Name = "NegativeButton";
+            this.NegativeButton.Size = new System.Drawing.Size(75, 23);
+            this.NegativeButton.TabIndex = 9;
+            this.NegativeButton.Text = "Negative";
+            this.NegativeButton.UseVisualStyleBackColor = true;
+            this.NegativeButton.Click += new System.EventHandler(this.NegativeButton_Click);
+            // 
             // SubImageButton
             // 
-            this.SubImageButton.Location = new System.Drawing.Point(1155, 169);
+            this.SubImageButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.SubImageButton.Location = new System.Drawing.Point(1164, 246);
             this.SubImageButton.Name = "SubImageButton";
             this.SubImageButton.Size = new System.Drawing.Size(75, 23);
             this.SubImageButton.TabIndex = 8;
@@ -1633,7 +1781,8 @@
             // 
             // buttonRotate
             // 
-            this.buttonRotate.Location = new System.Drawing.Point(1195, 140);
+            this.buttonRotate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonRotate.Location = new System.Drawing.Point(1196, 217);
             this.buttonRotate.Name = "buttonRotate";
             this.buttonRotate.Size = new System.Drawing.Size(75, 23);
             this.buttonRotate.TabIndex = 7;
@@ -1643,7 +1792,8 @@
             // 
             // Apply_button
             // 
-            this.Apply_button.Location = new System.Drawing.Point(1111, 140);
+            this.Apply_button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Apply_button.Location = new System.Drawing.Point(1115, 217);
             this.Apply_button.Name = "Apply_button";
             this.Apply_button.Size = new System.Drawing.Size(75, 23);
             this.Apply_button.TabIndex = 6;
@@ -1653,13 +1803,14 @@
             // 
             // zoom_mult
             // 
+            this.zoom_mult.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.zoom_mult.DecimalPlaces = 3;
             this.zoom_mult.Increment = new decimal(new int[] {
             1,
             0,
             0,
             196608});
-            this.zoom_mult.Location = new System.Drawing.Point(1121, 64);
+            this.zoom_mult.Location = new System.Drawing.Point(1130, 141);
             this.zoom_mult.Maximum = new decimal(new int[] {
             100000000,
             0,
@@ -1676,8 +1827,9 @@
             // 
             // Zoom_box
             // 
+            this.Zoom_box.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Zoom_box.AutoSize = true;
-            this.Zoom_box.Location = new System.Drawing.Point(1120, 117);
+            this.Zoom_box.Location = new System.Drawing.Point(1129, 194);
             this.Zoom_box.Name = "Zoom_box";
             this.Zoom_box.Size = new System.Drawing.Size(62, 17);
             this.Zoom_box.TabIndex = 4;
@@ -1686,11 +1838,12 @@
             // 
             // BoxMethSelection
             // 
+            this.BoxMethSelection.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.BoxMethSelection.FormattingEnabled = true;
             this.BoxMethSelection.Items.AddRange(new object[] {
             "Bilinear interpolation",
             "Nearest neighbour"});
-            this.BoxMethSelection.Location = new System.Drawing.Point(1120, 90);
+            this.BoxMethSelection.Location = new System.Drawing.Point(1129, 167);
             this.BoxMethSelection.Name = "BoxMethSelection";
             this.BoxMethSelection.Size = new System.Drawing.Size(121, 21);
             this.BoxMethSelection.TabIndex = 3;
@@ -1698,7 +1851,8 @@
             // 
             // Save_button
             // 
-            this.Save_button.Location = new System.Drawing.Point(1137, 35);
+            this.Save_button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Save_button.Location = new System.Drawing.Point(1141, 35);
             this.Save_button.Name = "Save_button";
             this.Save_button.Size = new System.Drawing.Size(75, 23);
             this.Save_button.TabIndex = 2;
@@ -1708,7 +1862,8 @@
             // 
             // Open_Button
             // 
-            this.Open_Button.Location = new System.Drawing.Point(1137, 6);
+            this.Open_Button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Open_Button.Location = new System.Drawing.Point(1141, 6);
             this.Open_Button.Name = "Open_Button";
             this.Open_Button.Size = new System.Drawing.Size(75, 23);
             this.Open_Button.TabIndex = 1;
@@ -1724,74 +1879,16 @@
             this.pictureBox1.BackColor = System.Drawing.Color.Gray;
             this.pictureBox1.Location = new System.Drawing.Point(6, 6);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1099, 591);
+            this.pictureBox1.Size = new System.Drawing.Size(1103, 591);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBox1_Paint);
-            // 
-            // NegativeButton
-            // 
-            this.NegativeButton.Location = new System.Drawing.Point(1112, 218);
-            this.NegativeButton.Name = "NegativeButton";
-            this.NegativeButton.Size = new System.Drawing.Size(75, 23);
-            this.NegativeButton.TabIndex = 9;
-            this.NegativeButton.Text = "Negative";
-            this.NegativeButton.UseVisualStyleBackColor = true;
-            this.NegativeButton.Click += new System.EventHandler(this.NegativeButton_Click);
-            // 
-            // LogarithmButton
-            // 
-            this.LogarithmButton.Location = new System.Drawing.Point(1112, 256);
-            this.LogarithmButton.Name = "LogarithmButton";
-            this.LogarithmButton.Size = new System.Drawing.Size(75, 23);
-            this.LogarithmButton.TabIndex = 10;
-            this.LogarithmButton.Text = "Logarithm";
-            this.LogarithmButton.UseVisualStyleBackColor = true;
-            this.LogarithmButton.Click += new System.EventHandler(this.LogarithmButton_Click);
-            // 
-            // InverseCheckBox
-            // 
-            this.InverseCheckBox.AutoSize = true;
-            this.InverseCheckBox.Location = new System.Drawing.Point(1195, 260);
-            this.InverseCheckBox.Name = "InverseCheckBox";
-            this.InverseCheckBox.Size = new System.Drawing.Size(61, 17);
-            this.InverseCheckBox.TabIndex = 11;
-            this.InverseCheckBox.Text = "Inverse";
-            this.InverseCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // PowButton
-            // 
-            this.PowButton.Location = new System.Drawing.Point(1112, 301);
-            this.PowButton.Name = "PowButton";
-            this.PowButton.Size = new System.Drawing.Size(75, 23);
-            this.PowButton.TabIndex = 12;
-            this.PowButton.Text = "Pow";
-            this.PowButton.UseVisualStyleBackColor = true;
-            this.PowButton.Click += new System.EventHandler(this.PowButton_Click);
-            // 
-            // PowValueNumeric
-            // 
-            this.PowValueNumeric.DecimalPlaces = 3;
-            this.PowValueNumeric.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            196608});
-            this.PowValueNumeric.Location = new System.Drawing.Point(1195, 303);
-            this.PowValueNumeric.Maximum = new decimal(new int[] {
-            1000000,
-            0,
-            0,
-            0});
-            this.PowValueNumeric.Name = "PowValueNumeric";
-            this.PowValueNumeric.Size = new System.Drawing.Size(61, 20);
-            this.PowValueNumeric.TabIndex = 13;
             // 
             // GraphForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1278, 624);
+            this.ClientSize = new System.Drawing.Size(1282, 624);
             this.Controls.Add(this.tabControl2);
             this.Name = "GraphForm";
             this.Text = "Графики";
@@ -1842,9 +1939,11 @@
             this.tabPage6.PerformLayout();
             this.tabPage7.ResumeLayout(false);
             this.tabPage7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.GraphNumberNum)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ColorDepthNum)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PowValueNumeric)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.zoom_mult)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PowValueNumeric)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1999,6 +2098,11 @@
         private System.Windows.Forms.Button NegativeButton;
         private System.Windows.Forms.NumericUpDown PowValueNumeric;
         private System.Windows.Forms.Button PowButton;
+        private System.Windows.Forms.Button EqualisationButton;
+        private System.Windows.Forms.NumericUpDown ColorDepthNum;
+        private System.Windows.Forms.Button buttonGetHistogram_Click;
+        private System.Windows.Forms.Label Grapgh;
+        private System.Windows.Forms.NumericUpDown GraphNumberNum;
     }
 }
 

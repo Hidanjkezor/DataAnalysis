@@ -618,7 +618,8 @@ namespace GraphDataAnalysis
 
             e.Graphics.InterpolationMode = InterpolationMode.NearestNeighbor;   // if inc picture size
             e.Graphics.PixelOffsetMode = PixelOffsetMode.Half;  //  for fix pixels
-            var r = new RectangleF(0,0,CurImage.Width, CurImage.Height);
+        //    var r = new RectangleF(0,0,CurImage.Width, CurImage.Height);
+            var r = new RectangleF(0, 0, (int)(CurImage.Width* (double)pictureBox1.Height/ CurImage.Height), pictureBox1.Height);
             e.Graphics.DrawImage(CurImage, r);
         }
 
@@ -730,6 +731,36 @@ namespace GraphDataAnalysis
             Data.ApplyPower((double)pow_value);
             CurImage = Data.GetBitmap();
             pictureBox1.Invalidate();
+        }
+
+        private void EqualisationButton_Click(object sender, EventArgs e)
+        {
+            Data.EqualizeHistogram();
+            CurImage = Data.GetBitmap();
+            pictureBox1.Invalidate();
+        }
+
+        private void ColorDepthNum_ValueChanged(object sender, EventArgs e)
+        {
+            Data.ColorDepth = (int) ColorDepthNum.Value;
+            CurImage = Data.GetBitmap();
+            pictureBox1.Invalidate();
+        }
+
+        private void buttonGetHistogram_Click_Click(object sender, EventArgs e)
+        {
+            var hist = Data.GetHistogram();
+            var min = Data.GetMin();
+            var ppl = ConvertIntArrayToCurveList(hist,min);
+            Plotter.Draw(_controlZgcList[(int)GraphNumberNum.Value - 1], ppl, "Histogram");
+        }
+        public static PointPairList ConvertIntArrayToCurveList(IEnumerable<int> array, double min = 0)
+        {
+            var lineItem = new PointPairList();
+            var i = 0;
+            foreach (var value in array)
+                lineItem.Add(new PointPair(min + i++, value));
+            return lineItem;
         }
     }
 }
